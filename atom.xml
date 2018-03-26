@@ -36,9 +36,9 @@
     
       <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/hexo/"/>
     
-      <category term="gitment" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/gitment/"/>
-    
       <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+      <category term="gitment" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/gitment/"/>
     
   </entry>
   
@@ -62,9 +62,9 @@
     
       <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/hexo/"/>
     
-      <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
-    
       <category term="theme" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/theme/"/>
+    
+      <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
     
   </entry>
   
@@ -159,28 +159,6 @@
   </entry>
   
   <entry>
-    <title>开篇</title>
-    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%BC%80%E7%AF%87/"/>
-    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/开篇/</id>
-    <published>2016-02-21T08:04:09.000Z</published>
-    <updated>2018-03-25T05:25:36.577Z</updated>
-    
-    <content type="html"><![CDATA[<p>开篇说点什么吧。<br><a id="more"></a></p><pre><code>while(true){    keepLeaning(Things.ALL);  keepReal();}</code></pre><h3 id="学习阶段划分"><a href="#学习阶段划分" class="headerlink" title="学习阶段划分"></a>学习阶段划分</h3><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80%20&amp;size=b10000_10000&amp;sec=1506935348251&amp;di=ccc2161f7f4a4e7ea485aaf2379c03ad&amp;imgtype=jpg&amp;src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fc995d143ad4bd113a2a4933f51afa40f4bfb0555.jpg" alt="Java学习" title="参考网络"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;开篇说点什么吧。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E6%89%8B%E8%AE%B0/"/>
-    
-    
-      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>小程序</title>
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/小程序入门/</id>
@@ -199,6 +177,28 @@
     
     
       <category term="小程序" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开篇</title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%BC%80%E7%AF%87/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/开篇/</id>
+    <published>2016-02-21T08:04:09.000Z</published>
+    <updated>2018-03-25T05:25:36.577Z</updated>
+    
+    <content type="html"><![CDATA[<p>开篇说点什么吧。<br><a id="more"></a></p><pre><code>while(true){    keepLeaning(Things.ALL);  keepReal();}</code></pre><h3 id="学习阶段划分"><a href="#学习阶段划分" class="headerlink" title="学习阶段划分"></a>学习阶段划分</h3><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80%20&amp;size=b10000_10000&amp;sec=1506935348251&amp;di=ccc2161f7f4a4e7ea485aaf2379c03ad&amp;imgtype=jpg&amp;src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fc995d143ad4bd113a2a4933f51afa40f4bfb0555.jpg" alt="Java学习" title="参考网络"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;开篇说点什么吧。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E6%89%8B%E8%AE%B0/"/>
+    
+    
+      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
     
   </entry>
   
