@@ -36,9 +36,9 @@
     
       <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/hexo/"/>
     
-      <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
-    
       <category term="gitment" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/gitment/"/>
+    
+      <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
     
   </entry>
   
@@ -62,9 +62,9 @@
     
       <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/hexo/"/>
     
-      <category term="theme" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/theme/"/>
-    
       <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+      <category term="theme" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/theme/"/>
     
   </entry>
   
@@ -137,28 +137,6 @@
   </entry>
   
   <entry>
-    <title>更新npm至最新版本</title>
-    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/npm%E6%8C%87%E4%BB%A4%E6%9B%B4%E6%96%B0/"/>
-    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/npm指令更新/</id>
-    <published>2016-02-21T08:04:09.000Z</published>
-    <updated>2018-03-25T05:52:06.873Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>Q</strong>：如何更新npm至最新版本<br><a id="more"></a><br><strong>A</strong>：命令行运行：</p><p>npm install -g npm</p><p>npm就自动为我们更新到最新版本</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;Q&lt;/strong&gt;：如何更新npm至最新版本&lt;br&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/linux/"/>
-    
-    
-      <category term="linux" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
     <title>小程序</title>
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/小程序入门/</id>
@@ -181,13 +159,35 @@
   </entry>
   
   <entry>
+    <title>更新npm至最新版本</title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/npm%E6%8C%87%E4%BB%A4%E6%9B%B4%E6%96%B0/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/npm指令更新/</id>
+    <published>2016-02-21T08:04:09.000Z</published>
+    <updated>2018-03-25T05:52:06.873Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Q</strong>：如何更新npm至最新版本<br><a id="more"></a><br><strong>A</strong>：命令行运行：</p><p>npm install -g npm</p><p>npm就自动为我们更新到最新版本</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;Q&lt;/strong&gt;：如何更新npm至最新版本&lt;br&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/linux/"/>
+    
+    
+      <category term="linux" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>开篇</title>
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%BC%80%E7%AF%87/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/开篇/</id>
     <published>2016-02-21T08:04:09.000Z</published>
-    <updated>2018-03-25T05:25:36.577Z</updated>
+    <updated>2018-03-26T03:22:11.603Z</updated>
     
-    <content type="html"><![CDATA[<p>开篇说点什么吧。<br><a id="more"></a></p><pre><code>while(true){    keepLeaning(Things.ALL);  keepReal();}</code></pre><h3 id="学习阶段划分"><a href="#学习阶段划分" class="headerlink" title="学习阶段划分"></a>学习阶段划分</h3><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80%20&amp;size=b10000_10000&amp;sec=1506935348251&amp;di=ccc2161f7f4a4e7ea485aaf2379c03ad&amp;imgtype=jpg&amp;src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fc995d143ad4bd113a2a4933f51afa40f4bfb0555.jpg" alt="Java学习" title="参考网络"></p>]]></content>
+    <content type="html"><![CDATA[<p>开篇说点什么吧。<br><a id="more"></a></p><pre><code>while(true){    keepLeaning(Things.ALL);  keepReal();}</code></pre><h3 id="学习阶段划分"><a href="#学习阶段划分" class="headerlink" title="学习阶段划分"></a>学习阶段划分</h3><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80%20&amp;size=b10000_10000&amp;sec=1506935348251&amp;di=ccc2161f7f4a4e7ea485aaf2379c03ad&amp;imgtype=jpg&amp;src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fc995d143ad4bd113a2a4933f51afa40f4bfb0555.jpg &quot;参考网络&quot; =300*400" alt="Java学习"></p>]]></content>
     
     <summary type="html">
     
