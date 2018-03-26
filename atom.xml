@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vvvvvvvvvvvvvvvvicky.github.io/"/>
-  <updated>2018-03-26T03:30:57.571Z</updated>
+  <updated>2018-03-26T03:33:57.791Z</updated>
   <id>https://vvvvvvvvvvvvvvvvicky.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2018/03/25/maupassant%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AEgitment/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2018/03/25/maupassant主题设置gitment/</id>
     <published>2018-03-25T05:25:13.000Z</published>
-    <updated>2018-03-26T03:30:57.571Z</updated>
+    <updated>2018-03-26T03:33:57.791Z</updated>
     
-    <content type="html"><![CDATA[<p>maupassant主题设置gitment踩坑记录。<br><a id="more"></a><br>1.在主题的配置文件_config.yml中更改配置如下：  </p><ul><li>注意大小写，写错会报“Error: Not Found”） <div style="width:600;align:left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1521966153467&di=17a022292609fafdfa8aff705fb38d39&imgtype=jpg&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F500fd9f9d72a605932b1f9162434349b033bba1c.jpg"><br></div></li></ul><p>2.修改文件Blog\themes\maupassant\layout_partial\comments.pug，设置样式内容：</p><div style="width:700;align:left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1521966602824&di=23bc17b1564c7b55592c0d23aef66241&imgtype=jpg&src=http%3A%2F%2Ff.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fac6eddc451da81cba4a986c15e66d0160924316a.jpg"><br></div><p><pre><br><code>link(rel=’stylesheet’, href=’<a href="https://imsun.github.io/gitment/style/default.css&#39;" target="_blank" rel="noopener">https://imsun.github.io/gitment/style/default.css&#39;</a>)<br>script(src=’<a href="https://imsun.github.io/gitment/dist/gitment.browser.js&#39;" target="_blank" rel="noopener">https://imsun.github.io/gitment/dist/gitment.browser.js&#39;</a>)</code><br></pre><br>将划线部分复制粘贴，并补充将id值改为page.date（如不加，则默认传入文章url，超过50个字符报错“Error：validation failed”）</p><p>3.在每篇的开头部分补充  comments: true  </p><div style="width:200;align:left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1521967111606&di=0dede719fa62743754e6e7eeaf6c5777&imgtype=jpg&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F8718367adab44aedfe61b8e8bf1c8701a18bfb8b.jpg"><br></div>]]></content>
+    <content type="html"><![CDATA[<p>maupassant主题设置gitment踩坑记录。<br><a id="more"></a><br>1.在主题的配置文件_config.yml中更改配置如下：  </p><ul><li>注意大小写，写错会报“Error: Not Found”） <div style="width:50%;align:left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1521966153467&di=17a022292609fafdfa8aff705fb38d39&imgtype=jpg&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F500fd9f9d72a605932b1f9162434349b033bba1c.jpg"><br></div></li></ul><p>2.修改文件Blog\themes\maupassant\layout_partial\comments.pug，设置样式内容：</p><div style="width:70%;align:left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1521966602824&di=23bc17b1564c7b55592c0d23aef66241&imgtype=jpg&src=http%3A%2F%2Ff.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fac6eddc451da81cba4a986c15e66d0160924316a.jpg"><br></div><br><pre><br><code>link(rel=’stylesheet’, href=’<a href="https://imsun.github.io/gitment/style/default.css&#39;" target="_blank" rel="noopener">https://imsun.github.io/gitment/style/default.css&#39;</a>)<br>script(src=’<a href="https://imsun.github.io/gitment/dist/gitment.browser.js&#39;" target="_blank" rel="noopener">https://imsun.github.io/gitment/dist/gitment.browser.js&#39;</a>)</code><br></pre><br>将划线部分复制粘贴，并补充将id值改为page.date（如不加，则默认传入文章url，超过50个字符报错“Error：validation failed”）<br><br>3.在每篇的开头部分补充  comments: true<br><div style="width:20%;align:left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1521967111606&di=0dede719fa62743754e6e7eeaf6c5777&imgtype=jpg&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F8718367adab44aedfe61b8e8bf1c8701a18bfb8b.jpg"><br></div>]]></content>
     
     <summary type="html">
     
@@ -137,28 +137,6 @@
   </entry>
   
   <entry>
-    <title>开篇</title>
-    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%BC%80%E7%AF%87/"/>
-    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/开篇/</id>
-    <published>2016-02-21T08:04:09.000Z</published>
-    <updated>2018-03-26T03:26:16.215Z</updated>
-    
-    <content type="html"><![CDATA[<p>开篇说点什么吧。<br><a id="more"></a></p><pre><code>while(true){    keepLeaning(Things.ALL);  keepReal();}</code></pre><h3 id="学习阶段划分"><a href="#学习阶段划分" class="headerlink" title="学习阶段划分"></a>学习阶段划分</h3><div style="width:80%;align:center"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1506935348251&di=ccc2161f7f4a4e7ea485aaf2379c03ad&imgtype=jpg&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fc995d143ad4bd113a2a4933f51afa40f4bfb0555.jpg"><br></div>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;开篇说点什么吧。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E6%89%8B%E8%AE%B0/"/>
-    
-    
-      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>更新npm至最新版本</title>
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/npm%E6%8C%87%E4%BB%A4%E6%9B%B4%E6%96%B0/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/npm指令更新/</id>
@@ -199,6 +177,28 @@
     
     
       <category term="小程序" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开篇</title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%BC%80%E7%AF%87/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/开篇/</id>
+    <published>2016-02-21T08:04:09.000Z</published>
+    <updated>2018-03-26T03:26:16.215Z</updated>
+    
+    <content type="html"><![CDATA[<p>开篇说点什么吧。<br><a id="more"></a></p><pre><code>while(true){    keepLeaning(Things.ALL);  keepReal();}</code></pre><h3 id="学习阶段划分"><a href="#学习阶段划分" class="headerlink" title="学习阶段划分"></a>学习阶段划分</h3><div style="width:80%;align:center"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1506935348251&di=ccc2161f7f4a4e7ea485aaf2379c03ad&imgtype=jpg&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fc995d143ad4bd113a2a4933f51afa40f4bfb0555.jpg"><br></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;开篇说点什么吧。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E6%89%8B%E8%AE%B0/"/>
+    
+    
+      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
     
   </entry>
   
