@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vvvvvvvvvvvvvvvvicky.github.io/"/>
-  <updated>2018-03-26T03:40:34.266Z</updated>
+  <updated>2018-03-26T03:42:43.781Z</updated>
   <id>https://vvvvvvvvvvvvvvvvicky.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2018/03/25/maupassant%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AEgitment/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2018/03/25/maupassant主题设置gitment/</id>
     <published>2018-03-25T05:25:13.000Z</published>
-    <updated>2018-03-26T03:40:34.266Z</updated>
+    <updated>2018-03-26T03:42:43.781Z</updated>
     
-    <content type="html"><![CDATA[<p>maupassant主题设置gitment踩坑记录。<br><a id="more"></a><br>1.在主题的配置文件_config.yml中更改配置如下：</p><div style="width:50%;align:left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1521966153467&di=17a022292609fafdfa8aff705fb38d39&imgtype=jpg&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F500fd9f9d72a605932b1f9162434349b033bba1c.jpg"><br></div><br>* 注意大小写，写错会报“Error: Not Found”）<br><br>2.修改文件Blog\themes\maupassant\layout_partial\comments.pug，设置样式内容：<br><div style="width:80%;align:left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1521966602824&di=23bc17b1564c7b55592c0d23aef66241&imgtype=jpg&src=http%3A%2F%2Ff.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fac6eddc451da81cba4a986c15e66d0160924316a.jpg"><br></div><br><pre><br><code>link(rel=’stylesheet’, href=’<a href="https://imsun.github.io/gitment/style/default.css&#39;" target="_blank" rel="noopener">https://imsun.github.io/gitment/style/default.css&#39;</a>)<br>script(src=’<a href="https://imsun.github.io/gitment/dist/gitment.browser.js&#39;" target="_blank" rel="noopener">https://imsun.github.io/gitment/dist/gitment.browser.js&#39;</a>)</code><br></pre><br>将划线部分复制粘贴，并补充将id值改为page.date（如不加，则默认传入文章url，超过50个字符报错“Error：validation failed”）<br><br>3.在每篇的开头部分补充  comments: true<br><div style="width:25%;align:left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1521967111606&di=0dede719fa62743754e6e7eeaf6c5777&imgtype=jpg&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F8718367adab44aedfe61b8e8bf1c8701a18bfb8b.jpg"><br></div>]]></content>
+    <content type="html"><![CDATA[<p>maupassant主题设置gitment踩坑记录。<br><a id="more"></a><br>1.在主题的配置文件_config.yml中更改配置如下：</p><div style="width:70%;align:left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1521966153467&di=17a022292609fafdfa8aff705fb38d39&imgtype=jpg&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F500fd9f9d72a605932b1f9162434349b033bba1c.jpg"><br></div><br>* 注意大小写，写错会报“Error: Not Found”）<br><br>2.修改文件Blog\themes\maupassant\layout_partial\comments.pug，设置样式内容：<br><div style="width:90%;align:left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1521966602824&di=23bc17b1564c7b55592c0d23aef66241&imgtype=jpg&src=http%3A%2F%2Ff.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fac6eddc451da81cba4a986c15e66d0160924316a.jpg"><br></div><br><pre><br><code>link(rel=’stylesheet’, href=’<a href="https://imsun.github.io/gitment/style/default.css&#39;" target="_blank" rel="noopener">https://imsun.github.io/gitment/style/default.css&#39;</a>)<br>script(src=’<a href="https://imsun.github.io/gitment/dist/gitment.browser.js&#39;" target="_blank" rel="noopener">https://imsun.github.io/gitment/dist/gitment.browser.js&#39;</a>)</code><br></pre><br>将划线部分复制粘贴，并补充将id值改为page.date（如不加，则默认传入文章url，超过50个字符报错“Error：validation failed”）<br><br>3.在每篇的开头部分补充  comments: true<br><div style="width:30%;align:left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1521967111606&di=0dede719fa62743754e6e7eeaf6c5777&imgtype=jpg&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F8718367adab44aedfe61b8e8bf1c8701a18bfb8b.jpg"><br></div>]]></content>
     
     <summary type="html">
     
@@ -36,9 +36,9 @@
     
       <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/hexo/"/>
     
-      <category term="gitment" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/gitment/"/>
-    
       <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+      <category term="gitment" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/gitment/"/>
     
   </entry>
   
@@ -62,9 +62,9 @@
     
       <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/hexo/"/>
     
-      <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
-    
       <category term="theme" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/theme/"/>
+    
+      <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
     
   </entry>
   
