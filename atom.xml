@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vvvvvvvvvvvvvvvvicky.github.io/"/>
-  <updated>2018-03-26T03:46:50.948Z</updated>
+  <updated>2018-03-27T15:30:08.351Z</updated>
   <id>https://vvvvvvvvvvvvvvvvicky.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>突击webmagic</title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2018/03/27/%E7%AA%81%E5%87%BBwebmagic/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2018/03/27/突击webmagic/</id>
+    <published>2018-03-27T02:45:27.000Z</published>
+    <updated>2018-03-27T15:30:08.351Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="主要包构成"><a href="#主要包构成" class="headerlink" title="主要包构成"></a>主要包构成</h1><h2 id="webmagic-core"><a href="#webmagic-core" class="headerlink" title="webmagic-core"></a>webmagic-core</h2><p>核心包，包含爬虫基本模块和基本抽取器。  </p><h2 id="webmagic-extension"><a href="#webmagic-extension" class="headerlink" title="webmagic-extension"></a>webmagic-extension</h2><p>拓展模块，提供工具，包括注解格式定义爬虫、json、分布式支持。<br>注解方式：基于POJO增加注释</p><h4 id="AfterExtractor"><a href="#AfterExtractor" class="headerlink" title="AfterExtractor"></a>AfterExtractor</h4><p>该接口是对注解方式抽取能力不足的补充。<br>使用注解方式填充完字段后调用<strong>afterProcess()</strong>方法，在这个方法中可以直接访问已抽取的字段、补充需要抽取的字段，甚至做一些简单的输出和持久化操作(并不是很建议这么做)。</p><h4 id="OOSpider"><a href="#OOSpider" class="headerlink" title="OOSpider"></a>OOSpider</h4><p>OOSpider是注解式爬虫的入口。<br>这里调用<strong>create()</strong>方法将model类加入到爬虫的抽取中，这里是可以传入多个类的。</p><h4 id="PageModelPipeline"><a href="#PageModelPipeline" class="headerlink" title="PageModelPipeline"></a>PageModelPipeline</h4><p>定义该接口来选择结果的输出方式。<br>PageModelPipeline目前包括ConsolePageModelPipeline、JsonFilePageModelPipeline、FilePageModelPipeline三个实现。</p><p><br><br><br><br><br><br><br></p><h1 id="拓展包"><a href="#拓展包" class="headerlink" title="拓展包"></a>拓展包</h1><h2 id="webmagic-saxon"><a href="#webmagic-saxon" class="headerlink" title="webmagic-saxon"></a>webmagic-saxon</h2><p>webmagic与saxon结合，saxon是xpath和xslt的解析工具。</p><h2 id="webmagic-selenium"><a href="#webmagic-selenium" class="headerlink" title="webmagic-selenium"></a>webmagic-selenium</h2><p>webmagic与selenium结合进行动态页面抓取，selenium可迷你浏览器进行页面渲染。</p><p><br><br><br><br><br><br><br></p><p>#模块划分#</p><p><div style="width:50%;align:left"><br><img src="http://code4craft.github.io/images/posts/webmagic.png"><br></div>  </p><h2 id="DownLoader"><a href="#DownLoader" class="headerlink" title="DownLoader"></a>DownLoader</h2><p>页面下载</p><h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="HttpClientDownloader"><a href="#HttpClientDownloader" class="headerlink" title="HttpClientDownloader"></a>HttpClientDownloader</h4><p>集成Apache HttpClient（Java http下载器，支持自定义http头（user-agent,cookie）、自动redirect、连接复用、cookie保留、设置代理等）</p><h4 id="SeleniumDownloader"><a href="#SeleniumDownloader" class="headerlink" title="SeleniumDownloader"></a>SeleniumDownloader</h4><p>实现动态页面抓取</p><h2 id="PageProcessor-链接提取和页面分析"><a href="#PageProcessor-链接提取和页面分析" class="headerlink" title="PageProcessor - 链接提取和页面分析"></a>PageProcessor - 链接提取和页面分析</h2><p>实现PageProcessor可以<strong>自定义</strong>爬虫逻辑。  </p><h3 id="核心方法"><a href="#核心方法" class="headerlink" title="核心方法"></a>核心方法</h3><h4 id="public-Page-download-Request-request-Task-task"><a href="#public-Page-download-Request-request-Task-task" class="headerlink" title="public Page download(Request request, Task task)"></a>public Page download(Request request, Task task)</h4><p>task是包装了任务对应的Site信息的抽象接口。</p><h4 id="public-void-setThread-int-thread"><a href="#public-void-setThread-int-thread" class="headerlink" title="public void setThread(int thread)"></a>public void setThread(int thread)</h4><p>Downloader涉及连接池等。</p><h3 id="核心方法-1"><a href="#核心方法-1" class="headerlink" title="核心方法"></a>核心方法</h3><h4 id="public-void-process-Page-page"><a href="#public-void-process-Page-page" class="headerlink" title="public void process(Page page)"></a>public void process(Page page)</h4><table><thead><tr><th style="text-align:right">方法</th><th style="text-align:left">说明</th></tr></thead><tbody><tr><td style="text-align:right">page.addTargetRequests()</td><td style="text-align:left">增加要抓取的URL</td></tr><tr><td style="text-align:right">page.putField()</td><td style="text-align:left">保存抽取结果</td></tr><tr><td style="text-align:right">page.getHtml().xpath()</td><td style="text-align:left">按照某个规则对结果进行抽取</td></tr><tr><td style="text-align:right">toString()</td><td style="text-align:left">返回单个String</td></tr><tr><td style="text-align:right">all()</td><td style="text-align:left">返回String列表</td></tr></tbody></table><h4 id="public-Site-getSite"><a href="#public-Site-getSite" class="headerlink" title="public Site getSite()"></a>public Site getSite()</h4><p>Site对象定义了爬虫的域名、起始地址、抓取间隔、编码等信息。</p><h4 id="Selector-简化页面抽取"><a href="#Selector-简化页面抽取" class="headerlink" title="Selector 简化页面抽取"></a>Selector 简化页面抽取</h4><p>整合了cssSelector、xpath、正则表达式<br>SmartContentSelector 对于页面正文的自动抽取的类。<br>Xsoup对xpath的语法进行拓展，支持自定义函数（在xpath末尾加上/name-of-function<br>()）  </p><table> <tr> <td width="100">函数</td> <td>说明</td> </tr> <tr> <td width="100">text(n)</td> <td>第n个文本节点(0表示取所有)</td> </tr> <tr> <td width="100">allText()</td> <td>包括子节点的所有文本</td> </tr>  <tr> <td width="100">tidyText()</td> <td>包括子节点的所有文本，并进行智能换行</td> </tr> <tr> <td width="100">html()</td> <td>内部html(不包括当前标签本身)</td> </tr> <tr> <td width="100">outerHtml()</td> <td>外部html(包括当前标签本身)</td> </tr> <tr> <td width="100">regex(@attr,expr,group)</td> <td>正则表达式，@attr是抽取的属性(可省略)，expr是表达式内容，group为捕获组(可省略，默认为0)</td> </tr> </table>  <h2 id="Spider-爬虫调度框架"><a href="#Spider-爬虫调度框架" class="headerlink" title="Spider - 爬虫调度框架"></a>Spider - 爬虫调度框架</h2><p>爬虫入口（核心调度） </p><pre> Spider.create(blogProcessor)      .scheduler(new FileCacheQueueScheduler("/data/temp/webmagic/cache/"))      .pipeline(new FilePipeline())      .thread(10).run();  `</pre><p>核心处理流程</p><pre>private void processRequest(Request request) {        Page page = downloader.download(request, this);        if (page == null) {            sleep(site.getSleepTime());            return;        }        pageProcessor.process(page);        addRequest(page);        for (Pipeline pipeline : pipelines) {            pipeline.process(page, this);        }        sleep(site.getSleepTime());    }</pre><h2 id="Scheduler-URL管理"><a href="#Scheduler-URL管理" class="headerlink" title="Scheduler - URL管理"></a>Scheduler - URL管理</h2><h3 id="主要方法"><a href="#主要方法" class="headerlink" title="主要方法"></a>主要方法</h3><h4 id="public-void-push-Request-request-Task-task"><a href="#public-void-push-Request-request-Task-task" class="headerlink" title="public void push(Request request,Task task)"></a>public void push(Request request,Task task)</h4><p>将待抓取的URL加入到Scheduler里面。request是对URL的一个封装，包括优先级、一个存储数据的Map</p><h4 id="public-Request-poll-Task-task"><a href="#public-Request-poll-Task-task" class="headerlink" title="public Request poll(Task task)"></a>public Request poll(Task task)</h4><p>从Scheduler中取出一条请求。</p><h3 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h3><h4 id="QueueScheduler"><a href="#QueueScheduler" class="headerlink" title="QueueScheduler"></a>QueueScheduler</h4><h4 id="FileCacheQueueScheduler"><a href="#FileCacheQueueScheduler" class="headerlink" title="FileCacheQueueScheduler"></a>FileCacheQueueScheduler</h4><h4 id="RedisScheduler"><a href="#RedisScheduler" class="headerlink" title="RedisScheduler"></a>RedisScheduler</h4><h2 id="Pipeline-离线分析和持久化"><a href="#Pipeline-离线分析和持久化" class="headerlink" title="Pipeline - 离线分析和持久化"></a>Pipeline - 离线分析和持久化</h2><p>结果输出和持久化。  </p><h3 id="主要方法-1"><a href="#主要方法-1" class="headerlink" title="主要方法"></a>主要方法</h3><p>public void process(ResultItems resultItems,Task task)<br>ResultItems是包含抽取结果的对象，通过ResultItems.get(key)可获取结果。</p><h3 id="实现-2"><a href="#实现-2" class="headerlink" title="实现"></a>实现</h3><h4 id="ConsolePipeline-输出到控制台。"><a href="#ConsolePipeline-输出到控制台。" class="headerlink" title="ConsolePipeline 输出到控制台。"></a>ConsolePipeline 输出到控制台。</h4><h4 id="FilePipeline"><a href="#FilePipeline" class="headerlink" title="FilePipeline"></a>FilePipeline</h4><h4 id="JsonFilePipeline"><a href="#JsonFilePipeline" class="headerlink" title="JsonFilePipeline"></a>JsonFilePipeline</h4><h3 id="webmagic目前还不支持持久化到数据库。可以结合JFinal"><a href="#webmagic目前还不支持持久化到数据库。可以结合JFinal" class="headerlink" title="webmagic目前还不支持持久化到数据库。可以结合JFinal"></a>webmagic目前还不支持持久化到数据库。可以结合JFinal</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;主要包构成&quot;&gt;&lt;a href=&quot;#主要包构成&quot; class=&quot;headerlink&quot; title=&quot;主要包构成&quot;&gt;&lt;/a&gt;主要包构成&lt;/h1&gt;&lt;h2 id=&quot;webmagic-core&quot;&gt;&lt;a href=&quot;#webmagic-core&quot; class=&quot;header
+      
+    
+    </summary>
+    
+      <category term="学习" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="爬虫" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E7%88%AC%E8%99%AB/"/>
+    
+      <category term="webmagic" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/webmagic/"/>
+    
+  </entry>
+  
+  <entry>
     <title>maupassant主题设置gitment</title>
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2018/03/25/maupassant%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AEgitment/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2018/03/25/maupassant主题设置gitment/</id>
     <published>2018-03-25T05:25:13.000Z</published>
-    <updated>2018-03-26T03:46:50.948Z</updated>
+    <updated>2018-03-27T03:35:38.347Z</updated>
     
     <content type="html"><![CDATA[<p>maupassant主题设置gitment踩坑记录。<br><a id="more"></a><br>1.在主题的配置文件_config.yml中更改配置如下：</p><div style="width:70%;align:left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1521966153467&di=17a022292609fafdfa8aff705fb38d39&imgtype=jpg&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F500fd9f9d72a605932b1f9162434349b033bba1c.jpg"><br></div><br>* 注意大小写，写错会报“Error: Not Found”）<br><br>2.修改文件Blog\themes\maupassant\layout_partial\comments.pug，设置样式内容：<br><div style="width:90%;align:left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1521966602824&di=23bc17b1564c7b55592c0d23aef66241&imgtype=jpg&src=http%3A%2F%2Ff.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fac6eddc451da81cba4a986c15e66d0160924316a.jpg"><br></div><p><pre><code><br>link(rel=’stylesheet’, href=’<a href="https://imsun.github.io/gitment/style/default.css&#39;" target="_blank" rel="noopener">https://imsun.github.io/gitment/style/default.css&#39;</a>)<br>script(src=’<a href="https://imsun.github.io/gitment/dist/gitment.browser.js&#39;" target="_blank" rel="noopener">https://imsun.github.io/gitment/dist/gitment.browser.js&#39;</a>)</code><br></pre><br>将划线部分复制粘贴，并补充将id值改为page.date（如不加，则默认传入文章url，超过50个字符报错“Error：validation failed”）</p><p>3.在每篇的开头部分补充  comments: true  </p><div style="width:30%;align:left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1521967111606&di=0dede719fa62743754e6e7eeaf6c5777&imgtype=jpg&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F8718367adab44aedfe61b8e8bf1c8701a18bfb8b.jpg"><br></div>]]></content>
     
@@ -31,7 +58,7 @@
     
     </summary>
     
-      <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/hexo/"/>
+      <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E8%B8%A9%E5%9D%91/"/>
     
     
       <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/hexo/"/>
@@ -47,7 +74,7 @@
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2018/03/23/hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%EF%BC%8C%E6%9C%AC%E5%9C%B0%E5%8F%AF%E4%BB%A5%EF%BC%8C%E4%B8%8A%E4%BC%A0git%E5%88%99%E4%B8%8D%E7%94%9F%E6%95%88/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2018/03/23/hexo更换主题，本地可以，上传git则不生效/</id>
     <published>2018-03-23T13:40:54.000Z</published>
-    <updated>2018-03-25T05:56:05.674Z</updated>
+    <updated>2018-03-27T02:58:22.234Z</updated>
     
     <content type="html"><![CDATA[<p><strong>Q</strong>:运行原主题landscape正常，更换主题后，hexo g生成文件，hexo s使其在本地运行，运行正常，hexo d上传到github，访问出现空白无内容以及乱码。<br><a id="more"></a><br><strong>A</strong>:查询了一些资料,得到这可能是hexo的缓存的问题，即根目录的db.json文件。所以在发布网站之前，先用hexo clean清除缓存，然后再部署网站。  </p><p>清除缓存的方法：  </p><ol><li>执行命令：hexo clean  </li><li>然后可以生成静态博客并在本地预览：hexo g ; hexo s</li></ol><p><strong>另</strong>：在多次上传后，同一浏览器存在缓存，故导致改变不能立刻显示，利用Ctrl+F5强制刷新。</p>]]></content>
     
@@ -57,7 +84,7 @@
     
     </summary>
     
-      <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/hexo/"/>
+      <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E8%B8%A9%E5%9D%91/"/>
     
     
       <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/hexo/"/>
@@ -73,7 +100,7 @@
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2018/03/23/%E7%94%A8chkdsk%E5%88%A0%E9%99%A4%E6%8D%9F%E5%9D%8F%E6%96%87%E4%BB%B6/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2018/03/23/用chkdsk删除损坏文件/</id>
     <published>2018-03-23T11:18:45.000Z</published>
-    <updated>2018-03-25T05:54:26.933Z</updated>
+    <updated>2018-03-27T03:39:37.470Z</updated>
     
     <content type="html"><![CDATA[<p><strong>Q</strong>:系统盘文件夹已损坏无法直接删除，提示需要调用系统命令chkdsk删除该文件。<br><a id="more"></a><br><strong>A</strong>：cmd运行“chkdsk E: /f”扫描指定盘（E盘），自动检查之后进行删除，自动关闭。<br>系统会检查出已损坏文件，并删除，健康文件依旧保留。  </p><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80%20&amp;size=b10000_10000&amp;sec=1521814233947&amp;di=3e111ac9cd31867c4a6b504398d78ec1&amp;imgtype=jpg&amp;src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F7af40ad162d9f2d31b76dfe6a5ec8a136327cc50.jpg" alt="chkdsk处理坏文件" title="chkdsk处理坏文件"></p><p><div id="container"></div></p><p><link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"></p><script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script><script>var gitment = new Gitment({  id: '<%= page.date %>'  owner: 'Vvvvvvvvvvvvvvvvicky',  repo: 'comment.github.io',  oauth: {    client_id: 'da11ae3e133507a54c29',    client_secret: '5ee4f2c6cf5943d8437c673222e48f249bee5cf9',  },})gitment.render('container')</script>]]></content>
     
@@ -83,7 +110,7 @@
     
     </summary>
     
-      <category term="windows" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/windows/"/>
+      <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E8%B8%A9%E5%9D%91/"/>
     
     
       <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
@@ -97,7 +124,7 @@
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2017/12/26/VSTS%E7%AC%94%E8%AE%B0/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2017/12/26/VSTS笔记/</id>
     <published>2017-12-25T16:12:52.000Z</published>
-    <updated>2018-03-25T05:52:24.360Z</updated>
+    <updated>2018-03-27T03:38:34.736Z</updated>
     
     <content type="html"><![CDATA[<p>搭建TFS之后，再度体验线上版本的VSTS，记录学习过程<br><a id="more"></a></p><h1 id="VSTS笔记-nbsp-nbsp-nbsp-Day-1"><a href="#VSTS笔记-nbsp-nbsp-nbsp-Day-1" class="headerlink" title="VSTS笔记&nbsp;&nbsp;&nbsp;Day 1"></a>VSTS笔记&nbsp;&nbsp;&nbsp;Day 1</h1><p>Epic<br>&nbsp;&nbsp;Feature<br>&nbsp;&nbsp;&nbsp;&nbsp;Story<br>&nbsp;&nbsp;&nbsp;&nbsp;Story<br>&nbsp;&nbsp;Feature<br>&nbsp;&nbsp;&nbsp;&nbsp;Story<br>&nbsp;&nbsp;&nbsp;&nbsp;Story  </p><p>以上为三者的包含关系。</p>]]></content>
     
@@ -107,7 +134,7 @@
     
     </summary>
     
-      <category term="Java" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/Java/"/>
+      <category term="学习" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
       <category term="VSTS" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/VSTS/"/>
@@ -119,7 +146,7 @@
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2017/10/05/%E7%AE%80%E4%BB%8BEntityManager/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2017/10/05/简介EntityManager/</id>
     <published>2017-10-05T15:37:54.000Z</published>
-    <updated>2018-03-26T03:53:24.730Z</updated>
+    <updated>2018-03-27T03:38:53.345Z</updated>
     
     <content type="html"><![CDATA[<p>EntityManager的含义及用法<br><a id="more"></a></p><h3 id="EntityManager介绍"><a href="#EntityManager介绍" class="headerlink" title="EntityManager介绍"></a>EntityManager介绍</h3><p>EntityManager是JPA操作基础，获取到EntityManager实例后，才能通过JPA对数据库进行操作，类似于Connection实例和JDBC的关系。</p><h3 id="什么是JPA"><a href="#什么是JPA" class="headerlink" title="什么是JPA"></a>什么是JPA</h3><p><strong>JPA —— Java Persistence API  Java持久化API</strong><br>定义了 对象-关系映射+实体对象持久化标准接口<br>JPA在持久化上下文中维护实体生命周期：<br>&nbsp;&nbsp;1. ORM元数据（支持annotation和xml）<br>&nbsp;&nbsp;2. 实体CRUD操作<br>&nbsp;&nbsp;2. 查询JPQL  </p><h3 id="实体的生命周期"><a href="#实体的生命周期" class="headerlink" title="实体的生命周期"></a>实体的生命周期</h3><ol><li>new ——新创建的实体对象，未分配主键值  </li><li>managed ——被EntityManager管理，处于Persistence Context  </li><li>detached ——处于Application Domain，在Persistance Context之外  </li><li>removed ——对象被删除  </li></ol><h4 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h4><ol><li>persist ——持久化（将新建或已删除的实体变为managed状态，存库）  </li><li>remove ——删除实体  </li><li>merge ——游离实体变为managed，存库  <div style="width:60%;align:center"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1507292305525&di=5c933128fa51ab422023b3310969573d&imgtype=jpg&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fa9d3fd1f4134970a2c76ab5b9ecad1c8a7865db8.jpg"><br></div>  </li></ol><h3 id="实体关系映射-ORM"><a href="#实体关系映射-ORM" class="headerlink" title="实体关系映射 ORM"></a>实体关系映射 ORM</h3><h4 id="基本映射"><a href="#基本映射" class="headerlink" title="基本映射"></a>基本映射</h4><table><thead><tr><th style="text-align:left">对象</th><th style="text-align:left">数据库</th><th style="text-align:left">annotation</th><th style="text-align:left">可选annotation</th></tr></thead><tbody><tr><td style="text-align:left">Class</td><td style="text-align:left">Table</td><td style="text-align:left">@Entity</td><td style="text-align:left">@Table(name=”tableName”)</td></tr><tr><td style="text-align:left">property</td><td style="text-align:left">colum</td><td style="text-align:left">@Id</td><td style="text-align:left">@GeneratedValue</td></tr><tr><td style="text-align:left">property</td><td style="text-align:left">primary key</td><td style="text-align:left">@Entity</td><td style="text-align:left">@Table(name=”tableName”)</td></tr><tr><td style="text-align:left">property</td><td style="text-align:left">NONE</td><td style="text-align:left">@Transient</td></tr></tbody></table><h4 id="ID生成策略"><a href="#ID生成策略" class="headerlink" title="ID生成策略"></a>ID生成策略</h4><ol><li>GeneratorType.AUTO JPA自动生成</li><li>GenerationType.IDENTITY 数据库自增长</li><li>GenerationType.SEQUENCE 数据库序列号</li><li>GenerationType.TABLE 数据库表记录ID的增长（需定义一个TableGenarator）</li></ol><h4 id="关联关系"><a href="#关联关系" class="headerlink" title="关联关系"></a>关联关系</h4><table><thead><tr><th style="text-align:left">关系类型</th><th style="text-align:left">Owning-Side</th><th style="text-align:left">Inverse-Side</th></tr></thead><tbody><tr><td style="text-align:left">one-to-one</td><td style="text-align:left">@OneToOne</td><td style="text-align:left">@OneToOne(mappedBy=”othersideName”)</td></tr><tr><td style="text-align:left">one-to-many / @ManyToOne</td><td style="text-align:left">colum</td><td style="text-align:left">@OneToMany(mappedBy=”xxx”)</td></tr><tr><td style="text-align:left">many-to-many</td><td style="text-align:left">@ManyToMany</td><td style="text-align:left">@ManyToMany(mappedBy =”xxx”)</td></tr></tbody></table><h3 id="查询语言"><a href="#查询语言" class="headerlink" title="查询语言"></a>查询语言</h3><ol><li>根据主键查询，EntityManager的find方法：T find(Class entityClass, Object primaryKey)  </li><li>使用JPQL查询语言（完全面向对象，类似hibernate HQL），使用EntityManager的createQuery方法：Query createQuery(String qlString)  <h5 id="EntityManager的各个方法"><a href="#EntityManager的各个方法" class="headerlink" title="EntityManager的各个方法"></a>EntityManager的各个方法</h5><img src="https://timgsa.baidu.com/timg?image&amp;quality=80%20&amp;size=b10000_10000&amp;sec=1507467896237&amp;di=7ce1661ed3e030471ba1624402867d55&amp;imgtype=jpg&amp;src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F91529822720e0cf30e1627830146f21fbf09aae1.jpg" alt="EntityManager方法"></li></ol>]]></content>
     
@@ -129,7 +156,7 @@
     
     </summary>
     
-      <category term="Java" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/Java/"/>
+      <category term="学习" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
       <category term="Java" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/Java/"/>
@@ -137,24 +164,24 @@
   </entry>
   
   <entry>
-    <title>更新npm至最新版本</title>
-    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/npm%E6%8C%87%E4%BB%A4%E6%9B%B4%E6%96%B0/"/>
-    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/npm指令更新/</id>
+    <title>小程序</title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/小程序入门/</id>
     <published>2016-02-21T08:04:09.000Z</published>
-    <updated>2018-03-25T05:52:06.873Z</updated>
+    <updated>2018-03-27T03:39:23.065Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>Q</strong>：如何更新npm至最新版本<br><a id="more"></a><br><strong>A</strong>：命令行运行：</p><p>npm install -g npm</p><p>npm就自动为我们更新到最新版本</p>]]></content>
+    <content type="html"><![CDATA[<p>小程序之旅<br><a id="more"></a></p><h2 id="代码构成"><a href="#代码构成" class="headerlink" title="代码构成"></a>代码构成</h2><h4 id="JSON配置"><a href="#JSON配置" class="headerlink" title="JSON配置"></a>JSON配置</h4><table><thead><tr><th style="text-align:right">文件名</th><th style="text-align:left">说明</th></tr></thead><tbody><tr><td style="text-align:right">app.json</td><td style="text-align:left">小程序全局配置：所有页面路径、界面表现、网络超时时间、底部 tab 等</td></tr><tr><td style="text-align:right">project.config.json</td><td style="text-align:left">工具配置：界面颜色、编译配置</td></tr><tr><td style="text-align:right">page.json</td><td style="text-align:left">页面配置：顶部颜色、是否允许下拉刷新等</td></tr></tbody></table><h4 id="WXML模板"><a href="#WXML模板" class="headerlink" title="WXML模板"></a>WXML模板</h4><p>HTML的角色<br>写 HTML 的时候，经常会用到的标签是 div, p, span<br>小程序的 WXML 用的标签是 view, button, text 等<br>MVVM 的开发模式(例如 React, Vue)，提倡把渲染和逻辑分离——JS仅管理状态，不直接操作DOM  </p><h4 id="WXSS样式"><a href="#WXSS样式" class="headerlink" title="WXSS样式"></a>WXSS样式</h4><p>尺寸单位：支持新的尺寸单位 rpx<br>全局的样式和局部样式：app.wxss 作为全局样式，会作用于当前小程序的所有页面，局部页面样式 page.wxss 仅对当前页面生效。  </p><p>####JS交互 #</p><h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><ol><li>启动<br>-&gt; 客户端将代码包下载到本地<br>-&gt; app.js的App实例onLaunch回调</li></ol>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;Q&lt;/strong&gt;：如何更新npm至最新版本&lt;br&gt;
+      &lt;p&gt;小程序之旅&lt;br&gt;
     
     </summary>
     
-      <category term="linux" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/linux/"/>
+      <category term="学习" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="linux" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/linux/"/>
+      <category term="小程序" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
@@ -181,24 +208,26 @@
   </entry>
   
   <entry>
-    <title>小程序</title>
-    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8/"/>
-    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/小程序入门/</id>
+    <title>更新npm至最新版本</title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/npm%E6%8C%87%E4%BB%A4%E6%9B%B4%E6%96%B0/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/npm指令更新/</id>
     <published>2016-02-21T08:04:09.000Z</published>
-    <updated>2018-03-26T04:12:22.540Z</updated>
+    <updated>2018-03-27T03:37:57.049Z</updated>
     
-    <content type="html"><![CDATA[<p>小程序之旅<br><a id="more"></a></p><h2 id="代码构成"><a href="#代码构成" class="headerlink" title="代码构成"></a>代码构成</h2><h4 id="JSON配置"><a href="#JSON配置" class="headerlink" title="JSON配置"></a>JSON配置</h4><table><thead><tr><th style="text-align:right">文件名</th><th style="text-align:left">说明</th></tr></thead><tbody><tr><td style="text-align:right">app.json</td><td style="text-align:left">小程序全局配置：所有页面路径、界面表现、网络超时时间、底部 tab 等</td></tr><tr><td style="text-align:right">project.config.json</td><td style="text-align:left">工具配置：界面颜色、编译配置</td></tr><tr><td style="text-align:right">page.json</td><td style="text-align:left">页面配置：顶部颜色、是否允许下拉刷新等</td></tr></tbody></table><h4 id="WXML模板"><a href="#WXML模板" class="headerlink" title="WXML模板"></a>WXML模板</h4><p>HTML的角色<br>写 HTML 的时候，经常会用到的标签是 div, p, span<br>小程序的 WXML 用的标签是 view, button, text 等<br>MVVM 的开发模式(例如 React, Vue)，提倡把渲染和逻辑分离——JS仅管理状态，不直接操作DOM  </p><h4 id="WXSS样式"><a href="#WXSS样式" class="headerlink" title="WXSS样式"></a>WXSS样式</h4><p>尺寸单位：支持新的尺寸单位 rpx<br>全局的样式和局部样式：app.wxss 作为全局样式，会作用于当前小程序的所有页面，局部页面样式 page.wxss 仅对当前页面生效。  </p><p>####JS交互 #</p><h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><ol><li>启动<br>-&gt; 客户端将代码包下载到本地<br>-&gt; app.js的App实例onLaunch回调</li></ol>]]></content>
+    <content type="html"><![CDATA[<p><strong>Q</strong>：如何更新npm至最新版本<br><a id="more"></a><br><strong>A</strong>：命令行运行：</p><p>npm install -g npm</p><p>npm就自动为我们更新到最新版本</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;小程序之旅&lt;br&gt;
+      &lt;p&gt;&lt;strong&gt;Q&lt;/strong&gt;：如何更新npm至最新版本&lt;br&gt;
     
     </summary>
     
-      <category term="小程序" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="学习" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="小程序" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="linux" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/linux/"/>
+    
+      <category term="npm" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/npm/"/>
     
   </entry>
   
