@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vvvvvvvvvvvvvvvvicky.github.io/"/>
-  <updated>2018-04-01T03:24:44.966Z</updated>
+  <updated>2018-05-14T10:30:06.694Z</updated>
   <id>https://vvvvvvvvvvvvvvvvicky.github.io/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux指令小结</title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2018/05/14/linux%E6%8C%87%E4%BB%A4%E5%B0%8F%E7%BB%93/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2018/05/14/linux指令小结/</id>
+    <published>2018-05-14T10:30:06.000Z</published>
+    <updated>2018-05-14T10:30:06.694Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>突击webmagic</title>
@@ -161,28 +175,6 @@
   </entry>
   
   <entry>
-    <title>小程序</title>
-    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8/"/>
-    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/小程序入门/</id>
-    <published>2016-02-21T08:04:09.000Z</published>
-    <updated>2018-03-27T03:39:23.065Z</updated>
-    
-    <content type="html"><![CDATA[<p>小程序之旅<br><a id="more"></a></p><h2 id="代码构成"><a href="#代码构成" class="headerlink" title="代码构成"></a>代码构成</h2><h4 id="JSON配置"><a href="#JSON配置" class="headerlink" title="JSON配置"></a>JSON配置</h4><table><thead><tr><th style="text-align:right">文件名</th><th style="text-align:left">说明</th></tr></thead><tbody><tr><td style="text-align:right">app.json</td><td style="text-align:left">小程序全局配置：所有页面路径、界面表现、网络超时时间、底部 tab 等</td></tr><tr><td style="text-align:right">project.config.json</td><td style="text-align:left">工具配置：界面颜色、编译配置</td></tr><tr><td style="text-align:right">page.json</td><td style="text-align:left">页面配置：顶部颜色、是否允许下拉刷新等</td></tr></tbody></table><h4 id="WXML模板"><a href="#WXML模板" class="headerlink" title="WXML模板"></a>WXML模板</h4><p>HTML的角色<br>写 HTML 的时候，经常会用到的标签是 div, p, span<br>小程序的 WXML 用的标签是 view, button, text 等<br>MVVM 的开发模式(例如 React, Vue)，提倡把渲染和逻辑分离——JS仅管理状态，不直接操作DOM  </p><h4 id="WXSS样式"><a href="#WXSS样式" class="headerlink" title="WXSS样式"></a>WXSS样式</h4><p>尺寸单位：支持新的尺寸单位 rpx<br>全局的样式和局部样式：app.wxss 作为全局样式，会作用于当前小程序的所有页面，局部页面样式 page.wxss 仅对当前页面生效。  </p><p>####JS交互 #</p><h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><ol><li>启动<br>-&gt; 客户端将代码包下载到本地<br>-&gt; app.js的App实例onLaunch回调</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;小程序之旅&lt;br&gt;
-    
-    </summary>
-    
-      <category term="学习" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="小程序" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>更新npm至最新版本</title>
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/npm%E6%8C%87%E4%BB%A4%E6%9B%B4%E6%96%B0/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/npm指令更新/</id>
@@ -203,6 +195,28 @@
       <category term="linux" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/linux/"/>
     
       <category term="npm" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/npm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小程序</title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/小程序入门/</id>
+    <published>2016-02-21T08:04:09.000Z</published>
+    <updated>2018-03-27T03:39:23.065Z</updated>
+    
+    <content type="html"><![CDATA[<p>小程序之旅<br><a id="more"></a></p><h2 id="代码构成"><a href="#代码构成" class="headerlink" title="代码构成"></a>代码构成</h2><h4 id="JSON配置"><a href="#JSON配置" class="headerlink" title="JSON配置"></a>JSON配置</h4><table><thead><tr><th style="text-align:right">文件名</th><th style="text-align:left">说明</th></tr></thead><tbody><tr><td style="text-align:right">app.json</td><td style="text-align:left">小程序全局配置：所有页面路径、界面表现、网络超时时间、底部 tab 等</td></tr><tr><td style="text-align:right">project.config.json</td><td style="text-align:left">工具配置：界面颜色、编译配置</td></tr><tr><td style="text-align:right">page.json</td><td style="text-align:left">页面配置：顶部颜色、是否允许下拉刷新等</td></tr></tbody></table><h4 id="WXML模板"><a href="#WXML模板" class="headerlink" title="WXML模板"></a>WXML模板</h4><p>HTML的角色<br>写 HTML 的时候，经常会用到的标签是 div, p, span<br>小程序的 WXML 用的标签是 view, button, text 等<br>MVVM 的开发模式(例如 React, Vue)，提倡把渲染和逻辑分离——JS仅管理状态，不直接操作DOM  </p><h4 id="WXSS样式"><a href="#WXSS样式" class="headerlink" title="WXSS样式"></a>WXSS样式</h4><p>尺寸单位：支持新的尺寸单位 rpx<br>全局的样式和局部样式：app.wxss 作为全局样式，会作用于当前小程序的所有页面，局部页面样式 page.wxss 仅对当前页面生效。  </p><p>####JS交互 #</p><h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><ol><li>启动<br>-&gt; 客户端将代码包下载到本地<br>-&gt; app.js的App实例onLaunch回调</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;小程序之旅&lt;br&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="小程序" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
