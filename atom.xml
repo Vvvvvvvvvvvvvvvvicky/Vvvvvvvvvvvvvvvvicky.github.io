@@ -288,6 +288,28 @@
   </entry>
   
   <entry>
+    <title>开篇</title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%BC%80%E7%AF%87/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/开篇/</id>
+    <published>2016-02-21T08:04:09.000Z</published>
+    <updated>2018-03-26T03:26:16.215Z</updated>
+    
+    <content type="html"><![CDATA[<p>开篇说点什么吧。<br><a id="more"></a></p><pre><code>while(true){    keepLeaning(Things.ALL);  keepReal();}</code></pre><h3 id="学习阶段划分"><a href="#学习阶段划分" class="headerlink" title="学习阶段划分"></a>学习阶段划分</h3><div style="width:80%;align:center"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1506935348251&di=ccc2161f7f4a4e7ea485aaf2379c03ad&imgtype=jpg&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fc995d143ad4bd113a2a4933f51afa40f4bfb0555.jpg"><br></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;开篇说点什么吧。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E6%89%8B%E8%AE%B0/"/>
+    
+    
+      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>更新npm至最新版本</title>
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/npm%E6%8C%87%E4%BB%A4%E6%9B%B4%E6%96%B0/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/npm指令更新/</id>
@@ -308,28 +330,6 @@
       <category term="linux" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/linux/"/>
     
       <category term="npm" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/npm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开篇</title>
-    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%BC%80%E7%AF%87/"/>
-    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/开篇/</id>
-    <published>2016-02-21T08:04:09.000Z</published>
-    <updated>2018-03-26T03:26:16.215Z</updated>
-    
-    <content type="html"><![CDATA[<p>开篇说点什么吧。<br><a id="more"></a></p><pre><code>while(true){    keepLeaning(Things.ALL);  keepReal();}</code></pre><h3 id="学习阶段划分"><a href="#学习阶段划分" class="headerlink" title="学习阶段划分"></a>学习阶段划分</h3><div style="width:80%;align:center"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1506935348251&di=ccc2161f7f4a4e7ea485aaf2379c03ad&imgtype=jpg&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fc995d143ad4bd113a2a4933f51afa40f4bfb0555.jpg"><br></div>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;开篇说点什么吧。&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E6%89%8B%E8%AE%B0/"/>
-    
-    
-      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
     
   </entry>
   
