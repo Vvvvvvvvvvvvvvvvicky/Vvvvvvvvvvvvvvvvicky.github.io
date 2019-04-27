@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vvvvvvvvvvvvvvvvicky.github.io/"/>
-  <updated>2018-06-14T11:15:47.928Z</updated>
+  <updated>2019-04-27T13:00:40.299Z</updated>
   <id>https://vvvvvvvvvvvvvvvvicky.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2019/04/27/Git%E4%BD%BF%E7%94%A8%E5%B0%8F%E7%BB%93/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2019/04/27/Git使用小结/</id>
+    <published>2019-04-27T12:57:23.946Z</published>
+    <updated>2019-04-27T13:00:40.299Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Git-使用小结"><a href="#Git-使用小结" class="headerlink" title="Git 使用小结"></a>Git 使用小结</h2><h4 id="常用指令记录"><a href="#常用指令记录" class="headerlink" title="常用指令记录"></a>常用指令记录</h4><p>1.git 取消文件 add：git reset HEAD + 文件名  （不加文件名，表示全部的add都取消）；</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Git-使用小结&quot;&gt;&lt;a href=&quot;#Git-使用小结&quot; class=&quot;headerlink&quot; title=&quot;Git 使用小结&quot;&gt;&lt;/a&gt;Git 使用小结&lt;/h2&gt;&lt;h4 id=&quot;常用指令记录&quot;&gt;&lt;a href=&quot;#常用指令记录&quot; class=&quot;headerli
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>《心做し》译音歌词</title>
@@ -133,7 +154,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;Java爬虫框架&lt;br&gt;
+      &lt;p&gt;Java爬虫框架&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -157,7 +178,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;maupassant主题设置gitment踩坑记录。&lt;br&gt;
+      &lt;p&gt;maupassant主题设置gitment踩坑记录。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -166,9 +187,9 @@
     
       <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/hexo/"/>
     
-      <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
-    
       <category term="gitment" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/gitment/"/>
+    
+      <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
     
   </entry>
   
@@ -183,7 +204,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;Q&lt;/strong&gt;:运行原主题landscape正常，更换主题后，hexo g生成文件，hexo s使其在本地运行，运行正常，hexo d上传到github，访问出现空白无内容以及乱码。&lt;br&gt;
+      &lt;p&gt;&lt;strong&gt;Q&lt;/strong&gt;:运行原主题landscape正常，更换主题后，hexo g生成文件，hexo s使其在本地运行，运行正常，hexo d上传到github，访问出现空白无内容以及乱码。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -192,9 +213,9 @@
     
       <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/hexo/"/>
     
-      <category term="theme" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/theme/"/>
-    
       <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+      <category term="theme" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/theme/"/>
     
   </entry>
   
@@ -209,7 +230,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;Q&lt;/strong&gt;:系统盘文件夹已损坏无法直接删除，提示需要调用系统命令chkdsk删除该文件。&lt;br&gt;
+      &lt;p&gt;&lt;strong&gt;Q&lt;/strong&gt;:系统盘文件夹已损坏无法直接删除，提示需要调用系统命令chkdsk删除该文件。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -233,7 +254,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;搭建TFS之后，再度体验线上版本的VSTS，记录学习过程&lt;br&gt;
+      &lt;p&gt;搭建TFS之后，再度体验线上版本的VSTS，记录学习过程&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -255,7 +276,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;EntityManager的含义及用法&lt;br&gt;
+      &lt;p&gt;EntityManager的含义及用法&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -263,6 +284,28 @@
     
     
       <category term="Java" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小程序</title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/小程序入门/</id>
+    <published>2016-02-21T08:04:09.000Z</published>
+    <updated>2018-12-02T15:34:17.389Z</updated>
+    
+    <content type="html"><![CDATA[<p>小程序之旅<br><a id="more"></a></p><h2 id="代码构成"><a href="#代码构成" class="headerlink" title="代码构成"></a>代码构成</h2><h4 id="JSON配置"><a href="#JSON配置" class="headerlink" title="JSON配置"></a>JSON配置</h4><table><thead><tr><th style="text-align:right">文件名</th><th style="text-align:left">说明</th></tr></thead><tbody><tr><td style="text-align:right">app.json</td><td style="text-align:left">小程序全局配置：所有页面路径、界面表现、网络超时时间、底部 tab 等</td></tr><tr><td style="text-align:right">project.config.json</td><td style="text-align:left">工具配置：界面颜色、编译配置</td></tr><tr><td style="text-align:right">page.json</td><td style="text-align:left">页面配置：顶部颜色、是否允许下拉刷新等</td></tr></tbody></table><h4 id="WXML模板"><a href="#WXML模板" class="headerlink" title="WXML模板"></a>WXML模板</h4><p>HTML的角色<br>写 HTML 的时候，经常会用到的标签是 div, p, span<br>小程序的 WXML 用的标签是 view, button, text 等<br>MVVM 的开发模式(例如 React, Vue)，提倡把渲染和逻辑分离——JS仅管理状态，不直接操作DOM  </p><h4 id="WXSS样式"><a href="#WXSS样式" class="headerlink" title="WXSS样式"></a>WXSS样式</h4><p>尺寸单位：支持新的尺寸单位 rpx<br>全局的样式和局部样式：app.wxss 作为全局样式，会作用于当前小程序的所有页面，局部页面样式 page.wxss 仅对当前页面生效。  </p><p>####JS交互 #</p><h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><ol><li><p>启动<br>-&gt; 客户端将代码包下载到本地<br>-&gt; app.js的App实例onLaunch回调</p></li><li><p>开发步骤:</p><p>-&gt;创建小程序实例</p><p>-&gt;创建页面（<u>js</u>,<u>wxml</u>,json,wxss）</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;小程序之旅&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="小程序" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
@@ -277,7 +320,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;开篇说点什么吧。&lt;br&gt;
+      &lt;p&gt;开篇说点什么吧。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -285,28 +328,6 @@
     
     
       <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小程序</title>
-    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8/"/>
-    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/小程序入门/</id>
-    <published>2016-02-21T08:04:09.000Z</published>
-    <updated>2018-03-27T03:39:23.065Z</updated>
-    
-    <content type="html"><![CDATA[<p>小程序之旅<br><a id="more"></a></p><h2 id="代码构成"><a href="#代码构成" class="headerlink" title="代码构成"></a>代码构成</h2><h4 id="JSON配置"><a href="#JSON配置" class="headerlink" title="JSON配置"></a>JSON配置</h4><table><thead><tr><th style="text-align:right">文件名</th><th style="text-align:left">说明</th></tr></thead><tbody><tr><td style="text-align:right">app.json</td><td style="text-align:left">小程序全局配置：所有页面路径、界面表现、网络超时时间、底部 tab 等</td></tr><tr><td style="text-align:right">project.config.json</td><td style="text-align:left">工具配置：界面颜色、编译配置</td></tr><tr><td style="text-align:right">page.json</td><td style="text-align:left">页面配置：顶部颜色、是否允许下拉刷新等</td></tr></tbody></table><h4 id="WXML模板"><a href="#WXML模板" class="headerlink" title="WXML模板"></a>WXML模板</h4><p>HTML的角色<br>写 HTML 的时候，经常会用到的标签是 div, p, span<br>小程序的 WXML 用的标签是 view, button, text 等<br>MVVM 的开发模式(例如 React, Vue)，提倡把渲染和逻辑分离——JS仅管理状态，不直接操作DOM  </p><h4 id="WXSS样式"><a href="#WXSS样式" class="headerlink" title="WXSS样式"></a>WXSS样式</h4><p>尺寸单位：支持新的尺寸单位 rpx<br>全局的样式和局部样式：app.wxss 作为全局样式，会作用于当前小程序的所有页面，局部页面样式 page.wxss 仅对当前页面生效。  </p><p>####JS交互 #</p><h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><ol><li>启动<br>-&gt; 客户端将代码包下载到本地<br>-&gt; app.js的App实例onLaunch回调</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;小程序之旅&lt;br&gt;
-    
-    </summary>
-    
-      <category term="学习" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="小程序" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
@@ -321,7 +342,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;Q&lt;/strong&gt;：如何更新npm至最新版本&lt;br&gt;
+      &lt;p&gt;&lt;strong&gt;Q&lt;/strong&gt;：如何更新npm至最新版本&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
