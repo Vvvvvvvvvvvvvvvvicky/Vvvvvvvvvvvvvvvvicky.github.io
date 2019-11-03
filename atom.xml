@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vvvvvvvvvvvvvvvvicky.github.io/"/>
-  <updated>2019-04-27T15:31:10.514Z</updated>
+  <updated>2019-11-03T08:42:08.035Z</updated>
   <id>https://vvvvvvvvvvvvvvvvicky.github.io/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AOP之代理</title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2019/10/10/AOP%E4%B9%8B%E4%BB%A3%E7%90%86/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2019/10/10/AOP之代理/</id>
+    <published>2019-10-10T03:01:24.000Z</published>
+    <updated>2019-11-03T08:42:08.035Z</updated>
+    
+    <content type="html"><![CDATA[<p>各种代理的学习</p><a id="more"></a><p>无代理：直接在方法内部修改</p><p>静态代理：新建一个类，调用原有类，在其前后增加补充操作</p><p>JDK动态代理：继承InvocationHandler，实现invoke方法，通过反射实现</p><p>CGLib动态代理：继承MethodInterceptor，实现intercept方法，提供方法级别的代理（可以代理没有任何接口的类）</p><p>原理区别：</p><p>java动态代理是利用反射机制生成一个实现代理接口的匿名类，在调用具体方法前调用InvokeHandler来处理。</p><p>而cglib动态代理是利用asm开源包，对代理对象类的class文件加载进来，通过修改其字节码生成子类来处理。</p><p>1、如果目标对象实现了接口，默认情况下会采用JDK的动态代理实现AOP<br>2、如果目标对象实现了接口，可以强制使用CGLIB实现AOP </p><p>3、如果目标对象没有实现了接口，必须采用CGLIB库，spring会自动在JDK动态代理和CGLIB之间转换</p><p>JDK动态代理和CGLIB字节码生成的区别？<br> （1）JDK动态代理只能对实现了接口的类生成代理，而不能针对类<br> （2）CGLIB是针对类实现代理，主要是对指定的类生成一个子类，覆盖其中的方法<br>   因为是继承，所以该类或方法最好不要声明成final </p><p>ref：<a href="https://www.cnblogs.com/leifei/p/8263448.html" target="_blank" rel="noopener">https://www.cnblogs.com/leifei/p/8263448.html</a> [Spring的两种动态代理：Jdk和Cglib 的区别和实现]</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;各种代理的学习&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="代理" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E4%BB%A3%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql踩坑记实</title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2019/05/18/mysql%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%AE%9E/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2019/05/18/mysql踩坑记实/</id>
+    <published>2019-05-18T10:40:36.000Z</published>
+    <updated>2019-05-18T10:45:56.931Z</updated>
+    
+    <content type="html"><![CDATA[<p>各种问题记录</p><a id="more"></a><ol><li><p>项目启动报错：java.sql.SQLException: Unknown system variable ‘language’</p><p>mysql驱动版本过高，不兼容，需要换低版本的mysql</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;各种问题记录&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="mysql" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>驾照习得</title>
@@ -43,9 +87,9 @@
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2019/04/27/Git%E4%BD%BF%E7%94%A8%E5%B0%8F%E7%BB%93/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2019/04/27/Git使用小结/</id>
     <published>2019-04-27T10:30:06.000Z</published>
-    <updated>2019-04-27T15:20:08.194Z</updated>
+    <updated>2019-08-11T09:52:51.051Z</updated>
     
-    <content type="html"><![CDATA[<p>git使用以及常用指令。</p><a id="more"></a><h2 id="Git-使用小结"><a href="#Git-使用小结" class="headerlink" title="Git 使用小结"></a>Git 使用小结</h2><h4 id="常用指令记录"><a href="#常用指令记录" class="headerlink" title="常用指令记录"></a>常用指令记录</h4><p>1.git 取消文件 add：git reset HEAD + 文件名  （不加文件名，表示全部的add都取消）；</p>]]></content>
+    <content type="html"><![CDATA[<p>git使用以及常用指令。</p><a id="more"></a><h2 id="Git-使用小结"><a href="#Git-使用小结" class="headerlink" title="Git 使用小结"></a>Git 使用小结</h2><h4 id="常用指令记录"><a href="#常用指令记录" class="headerlink" title="常用指令记录"></a>常用指令记录</h4><p>1.git 取消文件 add：git reset HEAD + 文件名  （不加文件名，表示全部的add都取消）；</p><p>2.修改最近一次提交的注释信息：git commit –amend</p>]]></content>
     
     <summary type="html">
     
@@ -192,9 +236,9 @@
     
       <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/hexo/"/>
     
-      <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
-    
       <category term="gitment" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/gitment/"/>
+    
+      <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
     
   </entry>
   
@@ -218,9 +262,9 @@
     
       <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/hexo/"/>
     
-      <category term="theme" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/theme/"/>
-    
       <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+      <category term="theme" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/theme/"/>
     
   </entry>
   
@@ -293,28 +337,6 @@
   </entry>
   
   <entry>
-    <title>开篇</title>
-    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%BC%80%E7%AF%87/"/>
-    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/开篇/</id>
-    <published>2016-02-21T08:04:09.000Z</published>
-    <updated>2018-03-26T03:26:16.215Z</updated>
-    
-    <content type="html"><![CDATA[<p>开篇说点什么吧。<br><a id="more"></a></p><pre><code>while(true){    keepLeaning(Things.ALL);  keepReal();}</code></pre><h3 id="学习阶段划分"><a href="#学习阶段划分" class="headerlink" title="学习阶段划分"></a>学习阶段划分</h3><div style="width:80%;align:center"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1506935348251&di=ccc2161f7f4a4e7ea485aaf2379c03ad&imgtype=jpg&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fc995d143ad4bd113a2a4933f51afa40f4bfb0555.jpg"><br></div>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;开篇说点什么吧。&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E6%89%8B%E8%AE%B0/"/>
-    
-    
-      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>更新npm至最新版本</title>
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/npm%E6%8C%87%E4%BB%A4%E6%9B%B4%E6%96%B0/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/npm指令更新/</id>
@@ -357,6 +379,28 @@
     
     
       <category term="小程序" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开篇</title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%BC%80%E7%AF%87/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/开篇/</id>
+    <published>2016-02-21T08:04:09.000Z</published>
+    <updated>2018-03-26T03:26:16.215Z</updated>
+    
+    <content type="html"><![CDATA[<p>开篇说点什么吧。<br><a id="more"></a></p><pre><code>while(true){    keepLeaning(Things.ALL);  keepReal();}</code></pre><h3 id="学习阶段划分"><a href="#学习阶段划分" class="headerlink" title="学习阶段划分"></a>学习阶段划分</h3><div style="width:80%;align:center"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1506935348251&di=ccc2161f7f4a4e7ea485aaf2379c03ad&imgtype=jpg&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fc995d143ad4bd113a2a4933f51afa40f4bfb0555.jpg"><br></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;开篇说点什么吧。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E6%89%8B%E8%AE%B0/"/>
+    
+    
+      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
     
   </entry>
   
