@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vvvvvvvvvvvvvvvvicky.github.io/"/>
-  <updated>2019-11-04T14:37:48.205Z</updated>
+  <updated>2019-11-04T15:05:33.586Z</updated>
   <id>https://vvvvvvvvvvvvvvvvicky.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2019/11/03/%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2019/11/03/面试复习笔记/</id>
     <published>2019-11-03T08:59:01.000Z</published>
-    <updated>2019-11-04T14:37:48.205Z</updated>
+    <updated>2019-11-04T15:05:33.586Z</updated>
     
-    <content type="html"><![CDATA[<p>面试前知识点总结。</p><a id="more"></a><h2 id="一、前后端分离"><a href="#一、前后端分离" class="headerlink" title="一、前后端分离"></a>一、前后端分离</h2><p>当下有很多的基于语言的模板引擎：freemarker、beetl、thymeleaf 等，基于模板引擎的开发还是前后端存在耦合的。<br>核心思想是<strong>前端HTML页面通过AJAX调用后端的RESTFUL API接口并使用JSON数据进行交互</strong>。<br>1.未分离<br>前端请求—&gt;后端servlet处理—&gt;展示层jsp<br>后端还会采用模板引擎（FreeMarker、thymeleaf等）<br>这种方式需要前端先开发html页面，后端开发完接口后，再将html改为jsp文件集成接口。<br>耦合性太强，前端需要掌握各种模板引擎写法；jsp初次加载时需要翻译为servlet耗时较久的弊端。</p><p>2.半分离<br>前端开发页面—&gt;后端通过接口（Ajax）获取数据—&gt;前端采用Dom操作对页面进行数据绑定，最终是把页面渲染出来。<br>由于前端因为没有掌握controller层，前端需要跟后端讨论页面是要同步输出还是异步Json渲染，所以为半分离<br>  弊端：<br>      1）JS存在大量冗余，在业务复杂的情况下，页面的渲染部分的代码，非常复杂；<br>      2）在Json返回的数据量比较大的情况下，渲染的十分缓慢，会出现页面卡顿的情况；<br>      3）SEO（ Search Engine Optimization，即搜索引擎优化）非常不方便，由于搜索引擎的爬虫无法爬下JS异步渲染的数据，导致这样的页面，SEO会存在一定的问题；<br>      4）资源消耗严重，在业务复杂的情况下，一个页面可能要发起多次HTTP请求才能将页面渲染完毕。（特别是移动端）</p><p>3.全分离<br>前端负责view和controller层<br>后端只负责model层，业务处理与数据持久化等<br>前端Controller：node.js——适合运用在高并发、I/O密集、少量业务逻辑的场景<br>    浏览器请求—&gt;node.js—&gt;后端服务<br> 浏览器(webview)不再直接请求JSP的API，而是：<br>      1）浏览器请求服务器端的NodeJS；<br>      2）NodeJS再发起HTTP去请求JSP；<br>      3）JSP依然原样API输出JSON给NodeJS；<br>      4）NodeJS收到JSON后再渲染出HTML页面；<br>      5）NodeJS直接将HTML页面flush到浏览器；<br>      这样，浏览器得到的就是普通的HTML页面，而不用再发Ajax去请求服务器了。</p><p>ref：<a href="https://blog.csdn.net/fuzhongmin05/article/details/81591072" target="_blank" rel="noopener">https://blog.csdn.net/fuzhongmin05/article/details/81591072</a> </p>]]></content>
+    <content type="html"><![CDATA[<p>面试前知识点总结。</p><a id="more"></a><h2 id="一、前后端分离"><a href="#一、前后端分离" class="headerlink" title="一、前后端分离"></a>一、前后端分离</h2><p>当下有很多的基于语言的模板引擎：freemarker、beetl、thymeleaf 等，基于模板引擎的开发还是前后端存在耦合的。<br>核心思想是<strong>前端HTML页面通过AJAX调用后端的RESTFUL API接口并使用JSON数据进行交互</strong>。<br>1.未分离<br>前端请求—&gt;后端servlet处理—&gt;展示层jsp<br>后端还会采用模板引擎（FreeMarker、thymeleaf等）<br>这种方式需要前端先开发html页面，后端开发完接口后，再将html改为jsp文件集成接口。<br>耦合性太强，前端需要掌握各种模板引擎写法；jsp初次加载时需要翻译为servlet耗时较久的弊端。</p><p>2.半分离<br>前端开发页面—&gt;后端通过接口（Ajax）获取数据—&gt;前端采用Dom操作对页面进行数据绑定，最终是把页面渲染出来。<br>由于前端因为没有掌握controller层，前端需要跟后端讨论页面是要同步输出还是异步Json渲染，所以为半分离<br>  弊端：<br>      1）JS存在大量冗余，在业务复杂的情况下，页面的渲染部分的代码，非常复杂；<br>      2）在Json返回的数据量比较大的情况下，渲染的十分缓慢，会出现页面卡顿的情况；<br>      3）SEO（ Search Engine Optimization，即搜索引擎优化）非常不方便，由于搜索引擎的爬虫无法爬下JS异步渲染的数据，导致这样的页面，SEO会存在一定的问题；<br>      4）资源消耗严重，在业务复杂的情况下，一个页面可能要发起多次HTTP请求才能将页面渲染完毕。（特别是移动端）</p><p>3.全分离<br>前端负责view和controller层<br>后端只负责model层，业务处理与数据持久化等<br>前端Controller：node.js——适合运用在高并发、I/O密集、少量业务逻辑的场景<br>    浏览器请求—&gt;node.js—&gt;后端服务<br> 浏览器(webview)不再直接请求JSP的API，而是：<br>      1）浏览器请求服务器端的NodeJS；<br>      2）NodeJS再发起HTTP去请求JSP；<br>      3）JSP依然原样API输出JSON给NodeJS；<br>      4）NodeJS收到JSON后再渲染出HTML页面；<br>      5）NodeJS直接将HTML页面flush到浏览器；<br>      这样，浏览器得到的就是普通的HTML页面，而不用再发Ajax去请求服务器了。</p><h2 id="持久层框架：Jpa和Mybatis"><a href="#持久层框架：Jpa和Mybatis" class="headerlink" title="持久层框架：Jpa和Mybatis"></a>持久层框架：Jpa和Mybatis</h2><p>Jpa (Java Persistence API) 是 Sun 官方提出的 Java 持久化规范。<br>Spring Data Jpa 是 Spring 基于 ORM 框架、Jpa 规范的基础上封装的一套 Jpa 应用框架。<br>mybatis是一个半自动化的持久层框架。<br>传统公司：hibernate —&gt; Jpa —&gt; Spring Data Jpa<br>互联网公司：ibatis —&gt; mybatis<br>ref：<a href="https://blog.csdn.net/fuzhongmin05/article/details/81591072" target="_blank" rel="noopener">https://blog.csdn.net/fuzhongmin05/article/details/81591072</a> </p>]]></content>
     
     <summary type="html">
     
