@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vvvvvvvvvvvvvvvvicky.github.io/"/>
-  <updated>2019-11-05T15:19:15.115Z</updated>
+  <updated>2019-11-06T15:41:53.683Z</updated>
   <id>https://vvvvvvvvvvvvvvvvicky.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学习Vue</title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2019/11/06/%E5%AD%A6%E4%B9%A0Vue/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2019/11/06/学习Vue/</id>
+    <published>2019-11-06T15:29:12.000Z</published>
+    <updated>2019-11-06T15:41:53.683Z</updated>
+    
+    <content type="html"><![CDATA[<p>学习Vue的一些笔记</p><a id="more"></a><h3 id="1-在vue项目中，执行-npm-run-dev-时提示-parser-“babylon”-is-deprecated-we-now-treat-it-as-parser-“babel”"><a href="#1-在vue项目中，执行-npm-run-dev-时提示-parser-“babylon”-is-deprecated-we-now-treat-it-as-parser-“babel”" class="headerlink" title="1.在vue项目中，执行 npm run dev 时提示{ parser: “babylon” } is deprecated; we now treat it as { parser: “babel” }"></a>1.在vue项目中，执行 npm run dev 时提示{ parser: “babylon” } is deprecated; we now treat it as { parser: “babel” }</h3><p>问题原因：是prettier版本导致的，重装prettier：npm install prettier@~1.12.0 -D或者cnpm install prettier@~1.12.0 –save-dev,然后重新npm run dev<br>解决办法：<br>找到modules包里面的：node_modules\vue-loader\lib\template-compiler\index.js<br>将{ parser: “babylon” } 换成  { parser: “babel” } 即可</p><h3 id="2-修改了App-vue后，提示“Component-template-should-contain-exactly-one-root-element-If-you-are-using-v-if-on-multiple-elements-use-v-else-if-to-chain-them-instead-”"><a href="#2-修改了App-vue后，提示“Component-template-should-contain-exactly-one-root-element-If-you-are-using-v-if-on-multiple-elements-use-v-else-if-to-chain-them-instead-”" class="headerlink" title="2.修改了App.vue后，提示“Component template should contain exactly one root element. If you are using v-if on multiple elements, use v-else-if to chain them instead.”"></a>2.修改了App.vue后，提示“Component template should contain exactly one root element. If you are using v-if on multiple elements, use v-else-if to chain them instead.”</h3><p>问题原因：<strong>vue模板只能有一个根对象</strong><br>解决方法：用一个div来或是别的标签来包裹全部的元素<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">"primary"</span>&gt;</span>button_1<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>div_1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">el-input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"测试一下"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-input</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span></span><span class="template-variable">&#123;&#123;test1&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;学习Vue的一些笔记&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Vue" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/Vue/"/>
+    
+  </entry>
   
   <entry>
     <title>面试复习笔记</title>
@@ -258,9 +280,9 @@
     
       <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/hexo/"/>
     
-      <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
-    
       <category term="gitment" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/gitment/"/>
+    
+      <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
     
   </entry>
   
@@ -284,9 +306,9 @@
     
       <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/hexo/"/>
     
-      <category term="theme" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/theme/"/>
-    
       <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+      <category term="theme" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/theme/"/>
     
   </entry>
   
