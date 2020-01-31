@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vvvvvvvvvvvvvvvvicky.github.io/"/>
-  <updated>2019-11-06T15:41:53.683Z</updated>
+  <updated>2020-01-31T16:48:43.983Z</updated>
   <id>https://vvvvvvvvvvvvvvvvicky.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《算法》读书笔记</title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2020/01/31/%E3%80%8A%E7%AE%97%E6%B3%95%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2020/01/31/《算法》读书笔记/</id>
+    <published>2020-01-31T03:26:42.000Z</published>
+    <updated>2020-01-31T16:48:43.983Z</updated>
+    
+    <content type="html"><![CDATA[<p>《算法图解》的读书笔记。<br><a id="more"></a></p><p>###大O表示法<br>大O表示法是指算法运行有多快，指出了算法运行时间的增速。用大O表示法表示算法运行时间。</p><p>常见的大O时间：<br>0.O(1)：常量时间<br>1.O(log n)：对数时间，二分查找<br>2.O(n)：线性时间，简单查找<br>3.O(n * log n)：快速排序（平均，最差情况为O(n^2)），合并排序（总是）（常用快速，而非合并，因为快速查找使用时间较短）<br>4.O(n^2)：选择排序<br>5.O(n!)：旅行商问题</p><p>###数据结构<br>数组：读取速度快<br>链表：插入、删除速度快<br>栈：后入先出。所有函数调用都进入调用栈（调用栈过长会占用大量内存）<br>散列表：key-value</p><p>###二分查找<br>仅当列表有序时，才管用。</p><p>###选择排序<br>遍历列表，选择最大的值，添加进新的列表中。对余下的数组循环这个过程，直到全部排完。</p><p>###递归<br>需要有基线条件和递归条件<br><img src="/2020/01/31/《算法》读书笔记/递归简化流程.jpg" alt="递归简化流程" style="zoom:40%;"></p><h4 id="分而治之（D-amp-C-divide-and-conquer）"><a href="#分而治之（D-amp-C-divide-and-conquer）" class="headerlink" title="分而治之（D&amp;C: divide and conquer）"></a>分而治之（D&amp;C: divide and conquer）</h4><p>1.找出基线条件<br>2.不断将问题分解（缩小规模），直到符合基线条件</p><h4 id="归纳证明"><a href="#归纳证明" class="headerlink" title="归纳证明"></a>归纳证明</h4><p>分为基线条件和归纳条件。<br>例：在基线条件中，证明算法对空数组或包含一个元素的数组有效；在归纳条件中，算法对一个元素的数组有效、对含两个元素的数组也有效（对含k个元素的数组管用，并对k+1个元素的数组也管用），那么可以推断出对任何元素的数组都管用。</p><p>###快速排序<br>快速排序就使用D&amp;C策略。<br>步骤：<br>1.随机选择基准值；<br>2.将数组分成两个子数组：小于基准值的和大于基准值的。<br>3.对这两个子数组进行快速排序。</p><p>###散列表<br>散列函数要求：<br>1.散列函数必须是一致的。<br>2.不同输入映射不同输出结果。</p><p>散列函数特点：<br>1.散列函数总是将同样的输入映射到相同索引。<br>2.散列函数总是将不同的输入映射到不同的索引。<br>3.散列函数记录数组的大小，只返回有效索引。</p><p>用途：<br>1.用于快速查找，O(1)。<br>2.防止重复。<br>3.用于缓存。</p><p>优化冲突（两个不同键对于同个位置（需要使用链表存储，极端情况影响性能））：<br>1.较低的装填因子；<br>    装填因子=散列表包含的元素数/位置总数<br>    装填因子越低，发生冲突的可能性越小，散列表性能越高。<br>    常见规则：装填因子大于0.7，需要调整散列表长度。<br>2.良好的散列函数。<br>    避免“扎堆”<br>    例：SHA函数</p><p>###广度优先搜索</p><p>###狄克斯特拉算法</p><p>###贪婪算法</p><p>###动态规划</p><p>###K最近邻算法 </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;《算法图解》的读书笔记。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="算法" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>学习Vue</title>
@@ -43,9 +65,9 @@
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2019/11/03/%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2019/11/03/面试复习笔记/</id>
     <published>2019-11-03T08:59:01.000Z</published>
-    <updated>2019-11-05T15:19:15.115Z</updated>
+    <updated>2020-01-07T15:32:32.774Z</updated>
     
-    <content type="html"><![CDATA[<p>面试前知识点总结。</p><a id="more"></a><h2 id="一、前后端分离"><a href="#一、前后端分离" class="headerlink" title="一、前后端分离"></a>一、前后端分离</h2><p>当下有很多的基于语言的模板引擎：freemarker、beetl、thymeleaf 等，基于模板引擎的开发还是前后端存在耦合的。<br>核心思想是<strong>前端HTML页面通过AJAX调用后端的RESTFUL API接口并使用JSON数据进行交互</strong>。<br>1.未分离<br>前端请求—&gt;后端servlet处理—&gt;展示层jsp<br>后端还会采用模板引擎（FreeMarker、thymeleaf等）<br>这种方式需要前端先开发html页面，后端开发完接口后，再将html改为jsp文件集成接口。<br>耦合性太强，前端需要掌握各种模板引擎写法；jsp初次加载时需要翻译为servlet耗时较久的弊端。</p><p>2.半分离<br>前端开发页面—&gt;后端通过接口（Ajax）获取数据—&gt;前端采用Dom操作对页面进行数据绑定，最终是把页面渲染出来。<br>由于前端因为没有掌握controller层，前端需要跟后端讨论页面是要同步输出还是异步Json渲染，所以为半分离<br>  弊端：<br>      1）JS存在大量冗余，在业务复杂的情况下，页面的渲染部分的代码，非常复杂；<br>      2）在Json返回的数据量比较大的情况下，渲染的十分缓慢，会出现页面卡顿的情况；<br>      3）SEO（ Search Engine Optimization，即搜索引擎优化）非常不方便，由于搜索引擎的爬虫无法爬下JS异步渲染的数据，导致这样的页面，SEO会存在一定的问题；<br>      4）资源消耗严重，在业务复杂的情况下，一个页面可能要发起多次HTTP请求才能将页面渲染完毕。（特别是移动端）</p><p>3.全分离<br>前端负责view和controller层<br>后端只负责model层，业务处理与数据持久化等<br>前端Controller：node.js——适合运用在高并发、I/O密集、少量业务逻辑的场景<br>    浏览器请求—&gt;node.js—&gt;后端服务<br> 浏览器(webview)不再直接请求JSP的API，而是：<br>      1）浏览器请求服务器端的NodeJS；<br>      2）NodeJS再发起HTTP去请求JSP；<br>      3）JSP依然原样API输出JSON给NodeJS；<br>      4）NodeJS收到JSON后再渲染出HTML页面；<br>      5）NodeJS直接将HTML页面flush到浏览器；<br>      这样，浏览器得到的就是普通的HTML页面，而不用再发Ajax去请求服务器了。</p><h2 id="持久层框架：Jpa和Mybatis"><a href="#持久层框架：Jpa和Mybatis" class="headerlink" title="持久层框架：Jpa和Mybatis"></a>持久层框架：Jpa和Mybatis</h2><p>Jpa (Java Persistence API) 是 Sun 官方提出的 Java 持久化规范。<br>Spring Data Jpa 是 Spring 基于 ORM 框架、Jpa 规范的基础上封装的一套 Jpa 应用框架。<br>mybatis是一个半自动化的持久层框架。<br>传统公司：hibernate —&gt; Jpa —&gt; Spring Data Jpa<br>互联网公司：ibatis —&gt; mybatis<br>ref：<a href="https://blog.csdn.net/fuzhongmin05/article/details/81591072" target="_blank" rel="noopener">https://blog.csdn.net/fuzhongmin05/article/details/81591072</a> </p><h2 id="Controller和-RestController"><a href="#Controller和-RestController" class="headerlink" title="@Controller和@RestController"></a>@Controller和@RestController</h2><p><strong>@RestController相当于@ResponseBody ＋ @Controller</strong><br>1.仅使用@RestController注解Controller，则Controller中的方法无法返回页面（InternalResourceViewResolver不起作用）<br>2.@Controller配合视图解析器InternalResourceViewResolver可以返回至return中的页面。<br>如果需要返回JSON，XML或自定义mediaType内容到页面，则需要在对应的方法上加上@ResponseBody注解。</p>]]></content>
+    <content type="html"><![CDATA[<p>面试前知识点总结。</p><a id="more"></a><h2 id="一、前后端分离"><a href="#一、前后端分离" class="headerlink" title="一、前后端分离"></a>一、前后端分离</h2><p>当下有很多的基于语言的模板引擎：freemarker、beetl、thymeleaf 等，基于模板引擎的开发还是前后端存在耦合的。<br>核心思想是<strong>前端HTML页面通过AJAX调用后端的RESTFUL API接口并使用JSON数据进行交互</strong>。<br>1.未分离<br>前端请求—&gt;后端servlet处理—&gt;展示层jsp<br>后端还会采用模板引擎（FreeMarker、thymeleaf等）<br>这种方式需要前端先开发html页面，后端开发完接口后，再将html改为jsp文件集成接口。<br>耦合性太强，前端需要掌握各种模板引擎写法；jsp初次加载时需要翻译为servlet耗时较久的弊端。</p><p>2.半分离<br>前端开发页面—&gt;后端通过接口（Ajax）获取数据—&gt;前端采用Dom操作对页面进行数据绑定，最终是把页面渲染出来。<br>由于前端因为没有掌握controller层，前端需要跟后端讨论页面是要同步输出还是异步Json渲染，所以为半分离<br>  弊端：<br>      1）JS存在大量冗余，在业务复杂的情况下，页面的渲染部分的代码，非常复杂；<br>      2）在Json返回的数据量比较大的情况下，渲染的十分缓慢，会出现页面卡顿的情况；<br>      3）SEO（ Search Engine Optimization，即搜索引擎优化）非常不方便，由于搜索引擎的爬虫无法爬下JS异步渲染的数据，导致这样的页面，SEO会存在一定的问题；<br>      4）资源消耗严重，在业务复杂的情况下，一个页面可能要发起多次HTTP请求才能将页面渲染完毕。（特别是移动端）</p><p>3.全分离<br>前端负责view和controller层<br>后端只负责model层，业务处理与数据持久化等<br>前端Controller：node.js——适合运用在高并发、I/O密集、少量业务逻辑的场景<br>    浏览器请求—&gt;node.js—&gt;后端服务<br> 浏览器(webview)不再直接请求JSP的API，而是：<br>      1）浏览器请求服务器端的NodeJS；<br>      2）NodeJS再发起HTTP去请求JSP；<br>      3）JSP依然原样API输出JSON给NodeJS；<br>      4）NodeJS收到JSON后再渲染出HTML页面；<br>      5）NodeJS直接将HTML页面flush到浏览器；<br>      这样，浏览器得到的就是普通的HTML页面，而不用再发Ajax去请求服务器了。</p><h2 id="持久层框架：Jpa和Mybatis"><a href="#持久层框架：Jpa和Mybatis" class="headerlink" title="持久层框架：Jpa和Mybatis"></a>持久层框架：Jpa和Mybatis</h2><p>Jpa (Java Persistence API) 是 Sun 官方提出的 Java 持久化规范。<br>Spring Data Jpa 是 Spring 基于 ORM 框架、Jpa 规范的基础上封装的一套 Jpa 应用框架。<br>mybatis是一个半自动化的持久层框架。<br>传统公司：hibernate —&gt; Jpa —&gt; Spring Data Jpa<br>互联网公司：ibatis —&gt; mybatis<br>ref：<a href="https://blog.csdn.net/fuzhongmin05/article/details/81591072" target="_blank" rel="noopener">https://blog.csdn.net/fuzhongmin05/article/details/81591072</a> </p><h2 id="Controller和-RestController"><a href="#Controller和-RestController" class="headerlink" title="@Controller和@RestController"></a>@Controller和@RestController</h2><p><strong>@RestController相当于@ResponseBody ＋ @Controller</strong><br>1.仅使用@RestController注解Controller，则Controller中的方法无法返回页面（InternalResourceViewResolver不起作用）<br>2.@Controller配合视图解析器InternalResourceViewResolver可以返回至return中的页面。<br>如果需要返回JSON，XML或自定义mediaType内容到页面，则需要在对应的方法上加上@ResponseBody注解。</p><h2 id="JVM的垃圾回收"><a href="#JVM的垃圾回收" class="headerlink" title="JVM的垃圾回收"></a>JVM的垃圾回收</h2><p>1.回收算法：<br>（1）引用计数算法<br>    对象添加计数器，引用就加1，计数器为0时不再被使用到<br>    优：实现简单、判断效率高<br>    缺：无法解决循环引用问题<br>（2）可达性分析算法（java虚拟机使用）<br>    通过GC Roots的对象作为起始点，从这些节点向下搜索，搜索走过的路径称为引用链，当有对象到GC Roots没有引用链时，说明对象不可达。<br>    <img src="/2019/11/03/面试复习笔记/可达性分析算法.jpg" alt="可达性分析算法"><br>    优：精确严谨，可以分析出循环引用的情况<br>    缺：实现复杂，消耗大量时间，分析过程中需要保证引用关系不能发生变化，需要GC停顿，将挺短所有Java执行线程（“Stop The World”）<br>2.引用<br>（1）类型：<br>    强引用：Object object = new Object(); 强引用还存在，被引用的对象<br>    软引用：有用但非必须的对象。内存不够时（抛OOM Error之前），才会被垃圾回收。<br>    弱引用：非必须对象。垃圾回收器工作即会回收。<br>    虚引用：对象有虚引用不会影响其生存时间。<br>（2）筛选过程：</p>]]></content>
     
     <summary type="html">
     
@@ -280,9 +302,9 @@
     
       <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/hexo/"/>
     
-      <category term="gitment" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/gitment/"/>
-    
       <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+      <category term="gitment" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/gitment/"/>
     
   </entry>
   
@@ -306,9 +328,9 @@
     
       <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/hexo/"/>
     
-      <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
-    
       <category term="theme" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/theme/"/>
+    
+      <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
     
   </entry>
   
@@ -381,6 +403,28 @@
   </entry>
   
   <entry>
+    <title>开篇</title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%BC%80%E7%AF%87/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/开篇/</id>
+    <published>2016-02-21T08:04:09.000Z</published>
+    <updated>2018-03-26T03:26:16.215Z</updated>
+    
+    <content type="html"><![CDATA[<p>开篇说点什么吧。<br><a id="more"></a></p><pre><code>while(true){    keepLeaning(Things.ALL);  keepReal();}</code></pre><h3 id="学习阶段划分"><a href="#学习阶段划分" class="headerlink" title="学习阶段划分"></a>学习阶段划分</h3><div style="width:80%;align:center"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1506935348251&di=ccc2161f7f4a4e7ea485aaf2379c03ad&imgtype=jpg&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fc995d143ad4bd113a2a4933f51afa40f4bfb0555.jpg"><br></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;开篇说点什么吧。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E6%89%8B%E8%AE%B0/"/>
+    
+    
+      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>小程序</title>
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/小程序入门/</id>
@@ -423,28 +467,6 @@
       <category term="linux" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/linux/"/>
     
       <category term="npm" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/npm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开篇</title>
-    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%BC%80%E7%AF%87/"/>
-    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/开篇/</id>
-    <published>2016-02-21T08:04:09.000Z</published>
-    <updated>2018-03-26T03:26:16.215Z</updated>
-    
-    <content type="html"><![CDATA[<p>开篇说点什么吧。<br><a id="more"></a></p><pre><code>while(true){    keepLeaning(Things.ALL);  keepReal();}</code></pre><h3 id="学习阶段划分"><a href="#学习阶段划分" class="headerlink" title="学习阶段划分"></a>学习阶段划分</h3><div style="width:80%;align:center"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1506935348251&di=ccc2161f7f4a4e7ea485aaf2379c03ad&imgtype=jpg&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fc995d143ad4bd113a2a4933f51afa40f4bfb0555.jpg"><br></div>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;开篇说点什么吧。&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E6%89%8B%E8%AE%B0/"/>
-    
-    
-      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
     
   </entry>
   
