@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vvvvvvvvvvvvvvvvicky.github.io/"/>
-  <updated>2020-01-31T16:48:43.983Z</updated>
+  <updated>2020-01-31T16:51:31.869Z</updated>
   <id>https://vvvvvvvvvvvvvvvvicky.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2020/01/31/%E3%80%8A%E7%AE%97%E6%B3%95%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2020/01/31/《算法》读书笔记/</id>
     <published>2020-01-31T03:26:42.000Z</published>
-    <updated>2020-01-31T16:48:43.983Z</updated>
+    <updated>2020-01-31T16:51:31.869Z</updated>
     
-    <content type="html"><![CDATA[<p>《算法图解》的读书笔记。<br><a id="more"></a></p><p>###大O表示法<br>大O表示法是指算法运行有多快，指出了算法运行时间的增速。用大O表示法表示算法运行时间。</p><p>常见的大O时间：<br>0.O(1)：常量时间<br>1.O(log n)：对数时间，二分查找<br>2.O(n)：线性时间，简单查找<br>3.O(n * log n)：快速排序（平均，最差情况为O(n^2)），合并排序（总是）（常用快速，而非合并，因为快速查找使用时间较短）<br>4.O(n^2)：选择排序<br>5.O(n!)：旅行商问题</p><p>###数据结构<br>数组：读取速度快<br>链表：插入、删除速度快<br>栈：后入先出。所有函数调用都进入调用栈（调用栈过长会占用大量内存）<br>散列表：key-value</p><p>###二分查找<br>仅当列表有序时，才管用。</p><p>###选择排序<br>遍历列表，选择最大的值，添加进新的列表中。对余下的数组循环这个过程，直到全部排完。</p><p>###递归<br>需要有基线条件和递归条件<br><img src="/2020/01/31/《算法》读书笔记/递归简化流程.jpg" alt="递归简化流程" style="zoom:40%;"></p><h4 id="分而治之（D-amp-C-divide-and-conquer）"><a href="#分而治之（D-amp-C-divide-and-conquer）" class="headerlink" title="分而治之（D&amp;C: divide and conquer）"></a>分而治之（D&amp;C: divide and conquer）</h4><p>1.找出基线条件<br>2.不断将问题分解（缩小规模），直到符合基线条件</p><h4 id="归纳证明"><a href="#归纳证明" class="headerlink" title="归纳证明"></a>归纳证明</h4><p>分为基线条件和归纳条件。<br>例：在基线条件中，证明算法对空数组或包含一个元素的数组有效；在归纳条件中，算法对一个元素的数组有效、对含两个元素的数组也有效（对含k个元素的数组管用，并对k+1个元素的数组也管用），那么可以推断出对任何元素的数组都管用。</p><p>###快速排序<br>快速排序就使用D&amp;C策略。<br>步骤：<br>1.随机选择基准值；<br>2.将数组分成两个子数组：小于基准值的和大于基准值的。<br>3.对这两个子数组进行快速排序。</p><p>###散列表<br>散列函数要求：<br>1.散列函数必须是一致的。<br>2.不同输入映射不同输出结果。</p><p>散列函数特点：<br>1.散列函数总是将同样的输入映射到相同索引。<br>2.散列函数总是将不同的输入映射到不同的索引。<br>3.散列函数记录数组的大小，只返回有效索引。</p><p>用途：<br>1.用于快速查找，O(1)。<br>2.防止重复。<br>3.用于缓存。</p><p>优化冲突（两个不同键对于同个位置（需要使用链表存储，极端情况影响性能））：<br>1.较低的装填因子；<br>    装填因子=散列表包含的元素数/位置总数<br>    装填因子越低，发生冲突的可能性越小，散列表性能越高。<br>    常见规则：装填因子大于0.7，需要调整散列表长度。<br>2.良好的散列函数。<br>    避免“扎堆”<br>    例：SHA函数</p><p>###广度优先搜索</p><p>###狄克斯特拉算法</p><p>###贪婪算法</p><p>###动态规划</p><p>###K最近邻算法 </p>]]></content>
+    <content type="html"><![CDATA[<p>《算法图解》的读书笔记。<br><a id="more"></a></p><h3 id="大O表示法"><a href="#大O表示法" class="headerlink" title="大O表示法"></a>大O表示法</h3><p>大O表示法是指算法运行有多快，指出了算法运行时间的增速。用大O表示法表示算法运行时间。</p><p>常见的大O时间：<br>0.O(1)：常量时间<br>1.O(log n)：对数时间，二分查找<br>2.O(n)：线性时间，简单查找<br>3.O(n * log n)：快速排序（平均，最差情况为O(n^2)），合并排序（总是）（常用快速，而非合并，因为快速查找使用时间较短）<br>4.O(n^2)：选择排序<br>5.O(n!)：旅行商问题</p><h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><p>数组：读取速度快<br>链表：插入、删除速度快<br>栈：后入先出。所有函数调用都进入调用栈（调用栈过长会占用大量内存）<br>散列表：key-value</p><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><p>仅当列表有序时，才管用。</p><h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>遍历列表，选择最大的值，添加进新的列表中。对余下的数组循环这个过程，直到全部排完。</p><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><p>需要有基线条件和递归条件<br><img src="/2020/01/31/《算法》读书笔记/递归简化流程.jpg" alt="递归简化流程" style="zoom:40%;"></p><h4 id="分而治之（D-amp-C-divide-and-conquer）"><a href="#分而治之（D-amp-C-divide-and-conquer）" class="headerlink" title="分而治之（D&amp;C: divide and conquer）"></a>分而治之（D&amp;C: divide and conquer）</h4><p>1.找出基线条件<br>2.不断将问题分解（缩小规模），直到符合基线条件</p><h4 id="归纳证明"><a href="#归纳证明" class="headerlink" title="归纳证明"></a>归纳证明</h4><p>分为基线条件和归纳条件。<br>例：在基线条件中，证明算法对空数组或包含一个元素的数组有效；在归纳条件中，算法对一个元素的数组有效、对含两个元素的数组也有效（对含k个元素的数组管用，并对k+1个元素的数组也管用），那么可以推断出对任何元素的数组都管用。</p><h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>快速排序就使用D&amp;C策略。<br>步骤：<br>1.随机选择基准值；<br>2.将数组分成两个子数组：小于基准值的和大于基准值的。<br>3.对这两个子数组进行快速排序。</p><h3 id="散列表"><a href="#散列表" class="headerlink" title="散列表"></a>散列表</h3><p>散列函数要求：<br>1.散列函数必须是一致的。<br>2.不同输入映射不同输出结果。</p><p>散列函数特点：<br>1.散列函数总是将同样的输入映射到相同索引。<br>2.散列函数总是将不同的输入映射到不同的索引。<br>3.散列函数记录数组的大小，只返回有效索引。</p><p>用途：<br>1.用于快速查找，O(1)。<br>2.防止重复。<br>3.用于缓存。</p><p>优化冲突（两个不同键对于同个位置（需要使用链表存储，极端情况影响性能））：<br>1.较低的装填因子；<br>    装填因子=散列表包含的元素数/位置总数<br>    装填因子越低，发生冲突的可能性越小，散列表性能越高。<br>    常见规则：装填因子大于0.7，需要调整散列表长度。<br>2.良好的散列函数。<br>    避免“扎堆”<br>    例：SHA函数</p><h3 id="广度优先搜索"><a href="#广度优先搜索" class="headerlink" title="广度优先搜索"></a>广度优先搜索</h3><h3 id="狄克斯特拉算法"><a href="#狄克斯特拉算法" class="headerlink" title="狄克斯特拉算法"></a>狄克斯特拉算法</h3><h3 id="贪婪算法"><a href="#贪婪算法" class="headerlink" title="贪婪算法"></a>贪婪算法</h3><h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><h3 id="K最近邻算法"><a href="#K最近邻算法" class="headerlink" title="K最近邻算法"></a>K最近邻算法</h3>]]></content>
     
     <summary type="html">
     
@@ -403,28 +403,6 @@
   </entry>
   
   <entry>
-    <title>开篇</title>
-    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%BC%80%E7%AF%87/"/>
-    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/开篇/</id>
-    <published>2016-02-21T08:04:09.000Z</published>
-    <updated>2018-03-26T03:26:16.215Z</updated>
-    
-    <content type="html"><![CDATA[<p>开篇说点什么吧。<br><a id="more"></a></p><pre><code>while(true){    keepLeaning(Things.ALL);  keepReal();}</code></pre><h3 id="学习阶段划分"><a href="#学习阶段划分" class="headerlink" title="学习阶段划分"></a>学习阶段划分</h3><div style="width:80%;align:center"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1506935348251&di=ccc2161f7f4a4e7ea485aaf2379c03ad&imgtype=jpg&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fc995d143ad4bd113a2a4933f51afa40f4bfb0555.jpg"><br></div>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;开篇说点什么吧。&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E6%89%8B%E8%AE%B0/"/>
-    
-    
-      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>小程序</title>
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/小程序入门/</id>
@@ -467,6 +445,28 @@
       <category term="linux" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/linux/"/>
     
       <category term="npm" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/npm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开篇</title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%BC%80%E7%AF%87/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/开篇/</id>
+    <published>2016-02-21T08:04:09.000Z</published>
+    <updated>2018-03-26T03:26:16.215Z</updated>
+    
+    <content type="html"><![CDATA[<p>开篇说点什么吧。<br><a id="more"></a></p><pre><code>while(true){    keepLeaning(Things.ALL);  keepReal();}</code></pre><h3 id="学习阶段划分"><a href="#学习阶段划分" class="headerlink" title="学习阶段划分"></a>学习阶段划分</h3><div style="width:80%;align:center"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1506935348251&di=ccc2161f7f4a4e7ea485aaf2379c03ad&imgtype=jpg&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fc995d143ad4bd113a2a4933f51afa40f4bfb0555.jpg"><br></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;开篇说点什么吧。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E6%89%8B%E8%AE%B0/"/>
+    
+    
+      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
     
   </entry>
   
