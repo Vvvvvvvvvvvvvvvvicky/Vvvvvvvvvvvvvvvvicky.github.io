@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vvvvvvvvvvvvvvvvicky.github.io/"/>
-  <updated>2020-01-31T16:51:31.869Z</updated>
+  <updated>2020-02-01T08:35:37.661Z</updated>
   <id>https://vvvvvvvvvvvvvvvvicky.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2020/01/31/%E3%80%8A%E7%AE%97%E6%B3%95%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2020/01/31/《算法》读书笔记/</id>
     <published>2020-01-31T03:26:42.000Z</published>
-    <updated>2020-01-31T16:51:31.869Z</updated>
+    <updated>2020-02-01T08:35:37.661Z</updated>
     
-    <content type="html"><![CDATA[<p>《算法图解》的读书笔记。<br><a id="more"></a></p><h3 id="大O表示法"><a href="#大O表示法" class="headerlink" title="大O表示法"></a>大O表示法</h3><p>大O表示法是指算法运行有多快，指出了算法运行时间的增速。用大O表示法表示算法运行时间。</p><p>常见的大O时间：<br>0.O(1)：常量时间<br>1.O(log n)：对数时间，二分查找<br>2.O(n)：线性时间，简单查找<br>3.O(n * log n)：快速排序（平均，最差情况为O(n^2)），合并排序（总是）（常用快速，而非合并，因为快速查找使用时间较短）<br>4.O(n^2)：选择排序<br>5.O(n!)：旅行商问题</p><h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><p>数组：读取速度快<br>链表：插入、删除速度快<br>栈：后入先出。所有函数调用都进入调用栈（调用栈过长会占用大量内存）<br>散列表：key-value</p><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><p>仅当列表有序时，才管用。</p><h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>遍历列表，选择最大的值，添加进新的列表中。对余下的数组循环这个过程，直到全部排完。</p><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><p>需要有基线条件和递归条件<br><img src="/2020/01/31/《算法》读书笔记/递归简化流程.jpg" alt="递归简化流程" style="zoom:40%;"></p><h4 id="分而治之（D-amp-C-divide-and-conquer）"><a href="#分而治之（D-amp-C-divide-and-conquer）" class="headerlink" title="分而治之（D&amp;C: divide and conquer）"></a>分而治之（D&amp;C: divide and conquer）</h4><p>1.找出基线条件<br>2.不断将问题分解（缩小规模），直到符合基线条件</p><h4 id="归纳证明"><a href="#归纳证明" class="headerlink" title="归纳证明"></a>归纳证明</h4><p>分为基线条件和归纳条件。<br>例：在基线条件中，证明算法对空数组或包含一个元素的数组有效；在归纳条件中，算法对一个元素的数组有效、对含两个元素的数组也有效（对含k个元素的数组管用，并对k+1个元素的数组也管用），那么可以推断出对任何元素的数组都管用。</p><h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>快速排序就使用D&amp;C策略。<br>步骤：<br>1.随机选择基准值；<br>2.将数组分成两个子数组：小于基准值的和大于基准值的。<br>3.对这两个子数组进行快速排序。</p><h3 id="散列表"><a href="#散列表" class="headerlink" title="散列表"></a>散列表</h3><p>散列函数要求：<br>1.散列函数必须是一致的。<br>2.不同输入映射不同输出结果。</p><p>散列函数特点：<br>1.散列函数总是将同样的输入映射到相同索引。<br>2.散列函数总是将不同的输入映射到不同的索引。<br>3.散列函数记录数组的大小，只返回有效索引。</p><p>用途：<br>1.用于快速查找，O(1)。<br>2.防止重复。<br>3.用于缓存。</p><p>优化冲突（两个不同键对于同个位置（需要使用链表存储，极端情况影响性能））：<br>1.较低的装填因子；<br>    装填因子=散列表包含的元素数/位置总数<br>    装填因子越低，发生冲突的可能性越小，散列表性能越高。<br>    常见规则：装填因子大于0.7，需要调整散列表长度。<br>2.良好的散列函数。<br>    避免“扎堆”<br>    例：SHA函数</p><h3 id="广度优先搜索"><a href="#广度优先搜索" class="headerlink" title="广度优先搜索"></a>广度优先搜索</h3><h3 id="狄克斯特拉算法"><a href="#狄克斯特拉算法" class="headerlink" title="狄克斯特拉算法"></a>狄克斯特拉算法</h3><h3 id="贪婪算法"><a href="#贪婪算法" class="headerlink" title="贪婪算法"></a>贪婪算法</h3><h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><h3 id="K最近邻算法"><a href="#K最近邻算法" class="headerlink" title="K最近邻算法"></a>K最近邻算法</h3>]]></content>
+    <content type="html"><![CDATA[<p>《算法图解》的读书笔记。<br><a id="more"></a></p><h3 id="大O表示法"><a href="#大O表示法" class="headerlink" title="大O表示法"></a>大O表示法</h3><p>大O表示法是指算法运行有多快，指出了算法运行时间的增速。用大O表示法表示算法运行时间。</p><p>常见的大O时间：<br>0.O(1)：常量时间<br>1.O(log n)：对数时间，二分查找<br>2.O(n)：线性时间，简单查找<br>3.O(n * log n)：快速排序（平均，最差情况为O(n^2)），合并排序（总是）（常用快速，而非合并，因为快速查找使用时间较短）<br>4.O(n^2)：选择排序<br>5.O(n!)：旅行商问题</p><h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><p>数组：读取速度快<br>链表：插入、删除速度快<br>栈：后入先出。所有函数调用都进入调用栈（调用栈过长会占用大量内存）<br>队列：先进先出<br>散列表：key-value</p><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><p>仅当列表有序时，才管用。</p><h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>遍历列表，选择最大的值，添加进新的列表中。对余下的数组循环这个过程，直到全部排完。</p><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><p>需要有基线条件和递归条件<br><img src="/2020/01/31/《算法》读书笔记/递归简化流程.jpg" alt="递归简化流程" style="zoom:40%;"></p><h4 id="分而治之（D-amp-C-divide-and-conquer）"><a href="#分而治之（D-amp-C-divide-and-conquer）" class="headerlink" title="分而治之（D&amp;C: divide and conquer）"></a>分而治之（D&amp;C: divide and conquer）</h4><p>1.找出基线条件<br>2.不断将问题分解（缩小规模），直到符合基线条件</p><h4 id="归纳证明"><a href="#归纳证明" class="headerlink" title="归纳证明"></a>归纳证明</h4><p>分为基线条件和归纳条件。<br>例：在基线条件中，证明算法对空数组或包含一个元素的数组有效；在归纳条件中，算法对一个元素的数组有效、对含两个元素的数组也有效（对含k个元素的数组管用，并对k+1个元素的数组也管用），那么可以推断出对任何元素的数组都管用。</p><h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>快速排序就使用D&amp;C策略。<br>步骤：<br>1.随机选择基准值；<br>2.将数组分成两个子数组：小于基准值的和大于基准值的。<br>3.对这两个子数组进行快速排序。</p><h3 id="散列表"><a href="#散列表" class="headerlink" title="散列表"></a>散列表</h3><p>散列函数要求：<br>1.散列函数必须是一致的。<br>2.不同输入映射不同输出结果。</p><p>散列函数特点：<br>1.散列函数总是将同样的输入映射到相同索引。<br>2.散列函数总是将不同的输入映射到不同的索引。<br>3.散列函数记录数组的大小，只返回有效索引。</p><p>用途：<br>1.用于快速查找，O(1)。<br>2.防止重复。<br>3.用于缓存。</p><p>优化冲突（两个不同键对于同个位置（需要使用链表存储，极端情况影响性能））：<br>1.较低的装填因子；<br>    装填因子=散列表包含的元素数/位置总数<br>    装填因子越低，发生冲突的可能性越小，散列表性能越高。<br>    常见规则：装填因子大于0.7，需要调整散列表长度。<br>2.良好的散列函数。<br>    避免“扎堆”<br>    例：SHA函数</p><h3 id="广度优先搜索（图算法，breadth-first-search-BFS）——非加权图"><a href="#广度优先搜索（图算法，breadth-first-search-BFS）——非加权图" class="headerlink" title="广度优先搜索（图算法，breadth-first search,BFS）——非加权图"></a>广度优先搜索（图算法，breadth-first search,BFS）——非加权图</h3><p>可以解决如下问题：<br>1.从节点A出发，是否有到节点B的路径<br>2.从节点A出发，是否有到节点B的最短路径</p><p>使用图建立模型，使用队列实现<br>检查过的人不需要再次检查，否则可能导致无限循环。</p><h3 id="狄克斯特拉算法——加权图"><a href="#狄克斯特拉算法——加权图" class="headerlink" title="狄克斯特拉算法——加权图"></a>狄克斯特拉算法——加权图</h3><p>找最快的路径，仅可用于有向无环加权图，不可用于包含父权边的图。<br>算法步骤：<br>1.找出“最便宜”的节点，即可在最短时间内达到的节点<br>2.更新该节点的邻居节点的开销<br>3.重复该过程，直到全部节点都执行完。</p><p>有向图中，包含父权边——使用贝尔曼-福德算法</p><h3 id="贪婪算法"><a href="#贪婪算法" class="headerlink" title="贪婪算法"></a>贪婪算法</h3><p>“每步都选择局部最优解”<br>易于实现、运行速度较快，是不错的近似算法。</p><h4 id="背包问题"><a href="#背包问题" class="headerlink" title="背包问题"></a>背包问题</h4><p>使用贪婪策略，可以获得近似解，但获取不到最优解：<br>1.装入可装入的最贵的商品<br>2.再装入可以装入的最贵的商品，依次类推。</p><h3 id="NP完全问题"><a href="#NP完全问题" class="headerlink" title="NP完全问题"></a>NP完全问题</h3><p>旅行商问题、集合覆盖问题<br>特点：需要计算所有的解，并从中选择最小/最短的那个。<br>没有快速解决方案，最佳做法是使用近似算法<br>O(n!)</p><p>哪些是NP完全问题：<br>1.元素较少时，算法运行速度非常快，但随这元素数量增加，速度会变得非常慢。<br>2.涉及“所有组合”的问题。<br>3.不能将问题分成小问题，必须考虑各种可能的情况的问题。<br>4.问题涉及序列（旅行商问题的城市序列）且难以解决。<br>5.问题涉及集合（广播台集合）且难以解决。<br>6.问题可以转换为集合覆盖问题或旅行商问题。</p><h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><p>算法公式：答案在最后单元格<br>$$<br>cell[i][j]  = 两者中较大的那个：`<br>  \begin{cases}<br>   1.上一个单元格的值（即cell[i-1][j]的值）\<br>   2.当前商品的价格 + 剩余空间的价值（指cell[i-1][j-当前商品的重量]）<br>  \end{cases}<br>$$</p><p>可解决问题：<br>1.背包问题<br>2.旅游行程最优化</p><p>注意：仅当每个子问题都是离散的（不依赖于其他子问题），动态规划才管用。<br>1.可以在给定约束条件下找到最优解<br>2.问题可以分解为彼此独立且离散的子问题时，才可以使用动态规划<br>3.动态规划的解决方案都涉及网格<br>4.单元格的值就是要优化的值<br>5.每个单元格都是一个子问题，设计方案时要考虑如何分解问题</p><h4 id="最长公共子串"><a href="#最长公共子串" class="headerlink" title="最长公共子串"></a>最长公共子串</h4><p>1.如果两个字母不相同，值为0<br>2.如果两个字母相同，值为左上角邻居加1</p><p>注意：问题最终答案并不在最后一个单元格中，而是网格中的最大数字 </p><h4 id="最长公共子序列"><a href="#最长公共子序列" class="headerlink" title="最长公共子序列"></a>最长公共子序列</h4><p>1.如果两个字母不同，就选择上方和左方邻居中较大的那个<br>2.如果两个字母相同，则当前单元格的值为左上方单元格的值加1</p><p>答案在最后单元格</p><h3 id="K最近邻算法"><a href="#K最近邻算法" class="headerlink" title="K最近邻算法"></a>K最近邻算法</h3><p>1.特征抽取<br>2.计算相似度：毕达哥拉斯公式（如下）、余弦相似度（常用）<br>$$<br>    \sqrt (x_1-x_2)^2  + \sqrt  (y_1-y_2)^2<br>$$</p><p>用途：<br>    分类——编组<br>    回归——预测结果</p>]]></content>
     
     <summary type="html">
     
@@ -403,28 +403,6 @@
   </entry>
   
   <entry>
-    <title>小程序</title>
-    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8/"/>
-    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/小程序入门/</id>
-    <published>2016-02-21T08:04:09.000Z</published>
-    <updated>2018-12-02T15:34:17.389Z</updated>
-    
-    <content type="html"><![CDATA[<p>小程序之旅<br><a id="more"></a></p><h2 id="代码构成"><a href="#代码构成" class="headerlink" title="代码构成"></a>代码构成</h2><h4 id="JSON配置"><a href="#JSON配置" class="headerlink" title="JSON配置"></a>JSON配置</h4><table><thead><tr><th style="text-align:right">文件名</th><th style="text-align:left">说明</th></tr></thead><tbody><tr><td style="text-align:right">app.json</td><td style="text-align:left">小程序全局配置：所有页面路径、界面表现、网络超时时间、底部 tab 等</td></tr><tr><td style="text-align:right">project.config.json</td><td style="text-align:left">工具配置：界面颜色、编译配置</td></tr><tr><td style="text-align:right">page.json</td><td style="text-align:left">页面配置：顶部颜色、是否允许下拉刷新等</td></tr></tbody></table><h4 id="WXML模板"><a href="#WXML模板" class="headerlink" title="WXML模板"></a>WXML模板</h4><p>HTML的角色<br>写 HTML 的时候，经常会用到的标签是 div, p, span<br>小程序的 WXML 用的标签是 view, button, text 等<br>MVVM 的开发模式(例如 React, Vue)，提倡把渲染和逻辑分离——JS仅管理状态，不直接操作DOM  </p><h4 id="WXSS样式"><a href="#WXSS样式" class="headerlink" title="WXSS样式"></a>WXSS样式</h4><p>尺寸单位：支持新的尺寸单位 rpx<br>全局的样式和局部样式：app.wxss 作为全局样式，会作用于当前小程序的所有页面，局部页面样式 page.wxss 仅对当前页面生效。  </p><p>####JS交互 #</p><h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><ol><li><p>启动<br>-&gt; 客户端将代码包下载到本地<br>-&gt; app.js的App实例onLaunch回调</p></li><li><p>开发步骤:</p><p>-&gt;创建小程序实例</p><p>-&gt;创建页面（<u>js</u>,<u>wxml</u>,json,wxss）</p></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;小程序之旅&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="学习" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="小程序" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>更新npm至最新版本</title>
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/npm%E6%8C%87%E4%BB%A4%E6%9B%B4%E6%96%B0/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/npm指令更新/</id>
@@ -467,6 +445,28 @@
     
     
       <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小程序</title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/小程序入门/</id>
+    <published>2016-02-21T08:04:09.000Z</published>
+    <updated>2018-12-02T15:34:17.389Z</updated>
+    
+    <content type="html"><![CDATA[<p>小程序之旅<br><a id="more"></a></p><h2 id="代码构成"><a href="#代码构成" class="headerlink" title="代码构成"></a>代码构成</h2><h4 id="JSON配置"><a href="#JSON配置" class="headerlink" title="JSON配置"></a>JSON配置</h4><table><thead><tr><th style="text-align:right">文件名</th><th style="text-align:left">说明</th></tr></thead><tbody><tr><td style="text-align:right">app.json</td><td style="text-align:left">小程序全局配置：所有页面路径、界面表现、网络超时时间、底部 tab 等</td></tr><tr><td style="text-align:right">project.config.json</td><td style="text-align:left">工具配置：界面颜色、编译配置</td></tr><tr><td style="text-align:right">page.json</td><td style="text-align:left">页面配置：顶部颜色、是否允许下拉刷新等</td></tr></tbody></table><h4 id="WXML模板"><a href="#WXML模板" class="headerlink" title="WXML模板"></a>WXML模板</h4><p>HTML的角色<br>写 HTML 的时候，经常会用到的标签是 div, p, span<br>小程序的 WXML 用的标签是 view, button, text 等<br>MVVM 的开发模式(例如 React, Vue)，提倡把渲染和逻辑分离——JS仅管理状态，不直接操作DOM  </p><h4 id="WXSS样式"><a href="#WXSS样式" class="headerlink" title="WXSS样式"></a>WXSS样式</h4><p>尺寸单位：支持新的尺寸单位 rpx<br>全局的样式和局部样式：app.wxss 作为全局样式，会作用于当前小程序的所有页面，局部页面样式 page.wxss 仅对当前页面生效。  </p><p>####JS交互 #</p><h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><ol><li><p>启动<br>-&gt; 客户端将代码包下载到本地<br>-&gt; app.js的App实例onLaunch回调</p></li><li><p>开发步骤:</p><p>-&gt;创建小程序实例</p><p>-&gt;创建页面（<u>js</u>,<u>wxml</u>,json,wxss）</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;小程序之旅&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="小程序" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
