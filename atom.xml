@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vvvvvvvvvvvvvvvvicky.github.io/"/>
-  <updated>2020-03-29T11:43:37.487Z</updated>
+  <updated>2020-03-29T12:42:31.292Z</updated>
   <id>https://vvvvvvvvvvvvvvvvicky.github.io/</id>
   
   <author>
@@ -17,13 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo使用</title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2020/03/29/hexo%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2020/03/29/hexo插件使用/</id>
+    <published>2020-03-29T12:17:16.000Z</published>
+    <updated>2020-03-29T12:42:31.292Z</updated>
+    
+    <content type="html"><![CDATA[<p>记录了我使用到hexo的一些问题（从3月29日起）。</p><p>前面使用到的后续再补充上来。</p><a id="more"></a><ul><li><a href="#1markdown---toc-------github---">1.markdown的原生TOC生成目录方式对github不支持</a></li><li><a href="#2--hexo--">2.常用hexo命令</a></li></ul><h2 id="1-markdown的原生TOC生成目录方式对github不支持"><a href="#1-markdown的原生TOC生成目录方式对github不支持" class="headerlink" title="1.markdown的原生TOC生成目录方式对github不支持"></a>1.markdown的原生TOC生成目录方式对github不支持</h2><p>在线生成工具 <a href="https://ecotrust-canada.github.io/markdown-toc/" target="_blank" rel="noopener">markdown-toc</a></p><h2 id="2-常用hexo命令"><a href="#2-常用hexo命令" class="headerlink" title="2.常用hexo命令"></a>2.常用hexo命令</h2><p>hexo clean 清空缓存文件</p><p>hexo generate （或hexo g）</p><p>hexo deploy（或hexo d）d</p><p>hexo server （或hexo s）</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录了我使用到hexo的一些问题（从3月29日起）。&lt;/p&gt;
+&lt;p&gt;前面使用到的后续再补充上来。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="学习记录" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    
+    
+      <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>maven一知半解</title>
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2020/03/29/maven%E4%B8%80%E7%9F%A5%E5%8D%8A%E8%A7%A3/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2020/03/29/maven一知半解/</id>
     <published>2020-03-29T11:07:53.000Z</published>
-    <updated>2020-03-29T11:43:37.487Z</updated>
+    <updated>2020-03-29T12:43:02.435Z</updated>
     
-    <content type="html"><![CDATA[<p>maven操作的各种问题记录</p><a id="more"></a><p>[TOC]</p><h2 id="1-mvn-clean-install-和-mvn-clean-区别"><a href="#1-mvn-clean-install-和-mvn-clean-区别" class="headerlink" title="1.mvn clean install 和 mvn clean 区别"></a>1.mvn clean install 和 mvn clean 区别</h2><p>现象发生的场景：mvn install后，新改的内容不生效，一定要后来使用mvn clean install 才生效。</p><p>mvn install ：compile -&gt; package -&gt; test</p><p>org.codehaus.plexus.archiver.AbstractArchiver中的关键一段，用来判断是否强制新建jar<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">boolean</span> <span class="title">checkForced</span><span class="params">()</span> <span class="keyword">throws</span> ArchiverException</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> ( !isForced() &amp;&amp; isSupportingForced() &amp;&amp; isUptodate() )</span><br><span class="line">    &#123;</span><br><span class="line">        getLogger().debug( <span class="string">"Archive "</span> + getDestFile() + <span class="string">" is uptodate."</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>代码中提到有这么几个情况，会认为jar包不是最新的：</p><ol><li>jar包不存在（其实就是mvn clean的效果）</li><li>传入比较的文件资源不存在</li><li>Resource with unknown modification date found，资源的修改时间未知</li><li>Resource with newer modification date found，jar包的最后修改时间比资源的最后修改时间早</li></ol><p>总结：</p><ol><li>mvn clean 得到的jar包是最新的，除非其他方式修改jar包中的内容而不修改源代码。</li><li>日常可以用mvn install，不进行chean，以节省时间；但最保险还是用 mvn clean install 生成最新的jar包或其他包</li><li>不想用mvn clean又想保证jar包最新，建议添加 -Djar.forceCreation 参数</li></ol><h2 id="2-mvn-clean-package-X-就能看到非常丰富的DEBUG信息"><a href="#2-mvn-clean-package-X-就能看到非常丰富的DEBUG信息" class="headerlink" title="2.mvn clean package -X 就能看到非常丰富的DEBUG信息"></a>2.mvn clean package -X 就能看到非常丰富的DEBUG信息</h2>]]></content>
+    <content type="html"><![CDATA[<p>maven操作的各种问题记录</p><a id="more"></a><ul><li><a href="#1mvn-clean-install---mvn-clean---">1.mvn clean install 和 mvn clean 区别</a></li><li><a href="#2mvn-clean-package--x----------debug--">2.mvn clean package -X 就能看到非常丰富的DEBUG信息</a></li></ul><h2 id="1-mvn-clean-install-和-mvn-clean-区别"><a href="#1-mvn-clean-install-和-mvn-clean-区别" class="headerlink" title="1.mvn clean install 和 mvn clean 区别"></a>1.mvn clean install 和 mvn clean 区别</h2><p>现象发生的场景：mvn install后，新改的内容不生效，一定要后来使用mvn clean install 才生效。</p><p>mvn install ：compile -&gt; package -&gt; test</p><p>org.codehaus.plexus.archiver.AbstractArchiver中的关键一段，用来判断是否强制新建jar<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">boolean</span> <span class="title">checkForced</span><span class="params">()</span> <span class="keyword">throws</span> ArchiverException</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> ( !isForced() &amp;&amp; isSupportingForced() &amp;&amp; isUptodate() )</span><br><span class="line">    &#123;</span><br><span class="line">        getLogger().debug( <span class="string">"Archive "</span> + getDestFile() + <span class="string">" is uptodate."</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>代码中提到有这么几个情况，会认为jar包不是最新的：</p><ol><li>jar包不存在（其实就是mvn clean的效果）</li><li>传入比较的文件资源不存在</li><li>Resource with unknown modification date found，资源的修改时间未知</li><li>Resource with newer modification date found，jar包的最后修改时间比资源的最后修改时间早</li></ol><p>总结：</p><ol><li>mvn clean 得到的jar包是最新的，除非其他方式修改jar包中的内容而不修改源代码。</li><li>日常可以用mvn install，不进行chean，以节省时间；但最保险还是用 mvn clean install 生成最新的jar包或其他包</li><li>不想用mvn clean又想保证jar包最新，建议添加 -Djar.forceCreation 参数</li></ol><h2 id="2-mvn-clean-package-X-就能看到非常丰富的DEBUG信息"><a href="#2-mvn-clean-package-X-就能看到非常丰富的DEBUG信息" class="headerlink" title="2.mvn clean package -X 就能看到非常丰富的DEBUG信息"></a>2.mvn clean package -X 就能看到非常丰富的DEBUG信息</h2>]]></content>
     
     <summary type="html">
     
@@ -425,48 +448,24 @@
   </entry>
   
   <entry>
-    <title>开篇</title>
-    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%BC%80%E7%AF%87/"/>
-    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/开篇/</id>
+    <title>小程序</title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/小程序入门/</id>
     <published>2016-02-21T08:04:09.000Z</published>
-    <updated>2018-03-26T03:26:16.215Z</updated>
+    <updated>2018-12-02T15:34:17.389Z</updated>
     
-    <content type="html"><![CDATA[<p>开篇说点什么吧。<br><a id="more"></a></p><pre><code>while(true){    keepLeaning(Things.ALL);  keepReal();}</code></pre><h3 id="学习阶段划分"><a href="#学习阶段划分" class="headerlink" title="学习阶段划分"></a>学习阶段划分</h3><div style="width:80%;align:center"><br><img src="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1506935348251&di=ccc2161f7f4a4e7ea485aaf2379c03ad&imgtype=jpg&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fc995d143ad4bd113a2a4933f51afa40f4bfb0555.jpg"><br></div>]]></content>
+    <content type="html"><![CDATA[<p>小程序之旅<br><a id="more"></a></p><h2 id="代码构成"><a href="#代码构成" class="headerlink" title="代码构成"></a>代码构成</h2><h4 id="JSON配置"><a href="#JSON配置" class="headerlink" title="JSON配置"></a>JSON配置</h4><table><thead><tr><th style="text-align:right">文件名</th><th style="text-align:left">说明</th></tr></thead><tbody><tr><td style="text-align:right">app.json</td><td style="text-align:left">小程序全局配置：所有页面路径、界面表现、网络超时时间、底部 tab 等</td></tr><tr><td style="text-align:right">project.config.json</td><td style="text-align:left">工具配置：界面颜色、编译配置</td></tr><tr><td style="text-align:right">page.json</td><td style="text-align:left">页面配置：顶部颜色、是否允许下拉刷新等</td></tr></tbody></table><h4 id="WXML模板"><a href="#WXML模板" class="headerlink" title="WXML模板"></a>WXML模板</h4><p>HTML的角色<br>写 HTML 的时候，经常会用到的标签是 div, p, span<br>小程序的 WXML 用的标签是 view, button, text 等<br>MVVM 的开发模式(例如 React, Vue)，提倡把渲染和逻辑分离——JS仅管理状态，不直接操作DOM  </p><h4 id="WXSS样式"><a href="#WXSS样式" class="headerlink" title="WXSS样式"></a>WXSS样式</h4><p>尺寸单位：支持新的尺寸单位 rpx<br>全局的样式和局部样式：app.wxss 作为全局样式，会作用于当前小程序的所有页面，局部页面样式 page.wxss 仅对当前页面生效。  </p><p>####JS交互 #</p><h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><ol><li><p>启动<br>-&gt; 客户端将代码包下载到本地<br>-&gt; app.js的App实例onLaunch回调</p></li><li><p>开发步骤:</p><p>-&gt;创建小程序实例</p><p>-&gt;创建页面（<u>js</u>,<u>wxml</u>,json,wxss）</p></li></ol>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;开篇说点什么吧。&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E6%89%8B%E8%AE%B0/"/>
-    
-    
-      <category term="手记" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>更新npm至最新版本</title>
-    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/npm%E6%8C%87%E4%BB%A4%E6%9B%B4%E6%96%B0/"/>
-    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2016/02/21/npm指令更新/</id>
-    <published>2016-02-21T08:04:09.000Z</published>
-    <updated>2018-03-27T03:37:57.049Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>Q</strong>：如何更新npm至最新版本<br><a id="more"></a><br><strong>A</strong>：命令行运行：</p><p>npm install -g npm</p><p>npm就自动为我们更新到最新版本</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;Q&lt;/strong&gt;：如何更新npm至最新版本&lt;br&gt;&lt;/p&gt;
+      &lt;p&gt;小程序之旅&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
       <category term="学习" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="linux" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/linux/"/>
-    
-      <category term="npm" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/npm/"/>
+      <category term="小程序" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
