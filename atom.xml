@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vvvvvvvvvvvvvvvvicky.github.io/"/>
-  <updated>2020-04-05T08:24:32.145Z</updated>
+  <updated>2020-04-05T08:28:44.740Z</updated>
   <id>https://vvvvvvvvvvvvvvvvicky.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2020/04/04/%E4%BD%BF%E7%94%A8redmine%E8%BF%9B%E8%A1%8C%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2020/04/04/使用redmine进行项目管理/</id>
     <published>2020-04-04T14:15:42.000Z</published>
-    <updated>2020-04-05T08:24:32.145Z</updated>
+    <updated>2020-04-05T08:28:44.740Z</updated>
     
-    <content type="html"><![CDATA[<p>使用redmine用来管理项目进度的过程记录。</p><p>（有空建议打一个tfs，看起来更舒服）</p><a id="more"></a><p>起源：公司项目管理方式不统一，日常工作都是使用excel表格追溯，不利于回顾。项目管理软件又迟迟审批不下来，所以各项目目前自发使用redmine来进行项目管理。</p><p>角色：<strong><u>需求</u></strong>、测试、开发、<strong><u>月度版本管理</u></strong>、<u><strong>代码版本管理</strong></u></p><p>项目使用路线图进行版本管理：</p><p>项目-配置-版本-新建版本</p><p><img src="/2020/04/04/使用redmine进行项目管理/新建版本路线图.jpg" alt="新建版本路线图"></p><p>1.系统分析师接到需求后，<strong><u>新建需求</u></strong>，并<strong><u>将需求拆分新建多个任务</u></strong>（状态为新建），并指派给对应开发（可以为多个）。</p><p>（1）登记基本信息，上传需求文档</p><p>（2）评估工时（以最小时间2h计，倍数递增），登记版本</p><p>（3）拆分任务：按功能点/交易模块，拆分任务，并指派，同时需要评估模块开发时间（以最小时间2h计，倍数递增）</p><p>2.开发人员接到<strong><u>任务</u></strong>后，开始开发工作（状态为进行中），更新进度，<strong><u>开发完成后将任务指派给测试人员</u></strong></p><p>3.测试人员开始测试工作，该功能点有缺陷时，<strong><u>新建缺陷</u></strong>并指派给开发人员处理（状态为新建）</p><p><img src="/2020/04/04/使用redmine进行项目管理/Blog\source\_posts\使用redmine进行项目管理\需求-任务-缺陷.jpg" alt="需求-任务-缺陷"></p><p>4.开发人员修复缺陷后，指回给对应测试人员，状态置为<strong><u>已解决</u></strong></p><p>5.测试人员验证缺陷修复情况，并<strong><u>关闭缺陷</u></strong></p><p>6.测试人员任务验证通过后，将<u><strong>任务关闭</strong></u></p><p>7.全部任务关闭后，需求人员<u><strong>关闭需求</strong></u>，并通知开发人员<strong><u>准备代码清单</u></strong>。（目前在svn，后期考虑redmine，或者转为git后使用tag）</p><p>8.版本人员投产前（时间建议提早、预留准生产复测时间），统计版本清单，登记wiki。</p><p><img src="/2020/04/04/使用redmine进行项目管理/版本wiki.jpg" alt="版本wiki"></p><p>9.代码版本管理员接到清单后，合并代码，部署准生产给测试人员复测。</p><p>10.测试通过，代码版本管理员合并投产代码，通知测试中心打包，并在投产演练环境验证投产包及脚本。</p><p>11.测试中心验证通过，根据<strong><u>版本wiki</u></strong>，将放至待投产仓库内。</p>]]></content>
+    <content type="html"><![CDATA[<p>使用redmine用来管理项目进度的过程记录。</p><p>（有空建议打一个tfs，看起来更舒服）</p><a id="more"></a><p>起源：公司项目管理方式不统一，日常工作都是使用excel表格追溯，不利于回顾。项目管理软件又迟迟审批不下来，所以各项目目前自发使用redmine来进行项目管理。</p><p>角色：<strong><u>需求</u></strong>、测试、开发、<strong><u>月度版本管理</u></strong>、<u><strong>代码版本管理</strong></u></p><p>项目使用路线图进行版本管理：</p><p>项目-配置-版本-新建版本</p><p><img src="/2020/04/04/使用redmine进行项目管理/新建版本路线图.jpg" alt="新建版本路线图"></p><p>1.系统分析师接到需求后，<strong><u>新建需求</u></strong>，并<strong><u>将需求拆分新建多个任务</u></strong>（状态为新建），并指派给对应开发（可以为多个）。</p><p>（1）登记基本信息，上传需求文档</p><p>（2）评估工时（以最小时间2h计，倍数递增），登记版本</p><p>（3）拆分任务：按功能点/交易模块，拆分任务，并指派，同时需要评估模块开发时间（以最小时间2h计，倍数递增）</p><p>2.开发人员接到<strong><u>任务</u></strong>后，开始开发工作（状态为进行中），更新进度，<strong><u>开发完成后将任务指派给测试人员</u></strong></p><p>3.测试人员开始测试工作，该功能点有缺陷时，<strong><u>新建缺陷</u></strong>并指派给开发人员处理（状态为新建）</p><p><img src="/2020/04/04/使用redmine进行项目管理/需求-任务-缺陷.jpg" alt="需求-任务-缺陷"></p><p>4.开发人员修复缺陷后，指回给对应测试人员，状态置为<strong><u>已解决</u></strong></p><p>5.测试人员验证缺陷修复情况，并<strong><u>关闭缺陷</u></strong></p><p>6.测试人员任务验证通过后，将<u><strong>任务关闭</strong></u></p><p>7.全部任务关闭后，需求人员<u><strong>关闭需求</strong></u>，并通知开发人员<strong><u>准备代码清单</u></strong>。（目前在svn，后期考虑redmine，或者转为git后使用tag）</p><p>8.版本人员投产前（时间建议提早、预留准生产复测时间），统计版本清单，登记wiki。</p><p><img src="/2020/04/04/使用redmine进行项目管理/版本wiki.jpg" alt="版本wiki"></p><p>9.代码版本管理员接到清单后，合并代码，部署准生产给测试人员复测。</p><p>10.测试通过，代码版本管理员合并投产代码，通知测试中心打包，并在投产演练环境验证投产包及脚本。</p><p>11.测试中心验证通过，根据<strong><u>版本wiki</u></strong>，将放至待投产仓库内。</p>]]></content>
     
     <summary type="html">
     
@@ -370,9 +370,9 @@
     
       <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/hexo/"/>
     
-      <category term="gitment" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/gitment/"/>
-    
       <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+      <category term="gitment" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/gitment/"/>
     
   </entry>
   
@@ -396,9 +396,9 @@
     
       <category term="hexo" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/hexo/"/>
     
-      <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
-    
       <category term="theme" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/theme/"/>
+    
+      <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
     
   </entry>
   
