@@ -216,7 +216,7 @@ public class AppMain {
 
 ## 8.ClassLoader
 
-1.JVM运行流程、JVM基本结构
+### 8.1 JVM运行流程、JVM基本结构
 
 <img src="/Users/vic/Documents/study/workspace/Vvvvvvvvvvvvvvvvicky.github.io/source/_posts/JVM学习/JVM运行流程.jpg" alt="JVM运行流程" style="zoom:50%;" />
 
@@ -226,14 +226,144 @@ JVM基本结构
 
 Class Files -> ClassLoader -> 运行时数据区 -> 执行引擎，本地库接口 -> 本地方法库
 
-
-
 类的装载：
 
 ​	***<u>加载</u>***、链接（验证、准备、解析）、初始化、使用、卸载
 
-2.类加载器的双亲委派模式
 
-3.ClassLoader源码分析
 
-4.实现自定义的类加载器
+### 8.2 类加载器的双亲委派模式
+
+双亲委派的类之间不是继承，类似于组合的关系
+
+自己不加载这个类，就委托给“父类”的加载器来加载
+
+目的：避免类的重复加载，避免类的篡改
+
+
+
+Jdk默认的类加载器：（4种）
+
+1⃣️ BootStrap ClassLoader JVM启动加载器（JVM内核编写，C++编写）
+
+​	父类加载器为null
+
+​	加载jre下的jar（jdk的/Contents/HOME/），例如rt.jar，resources.jar等
+
+
+
+2⃣️ Extension ClassLoader extends ClassLoader（java编写）
+
+​	父类的加载器为BootStrap ClassLoader
+
+​	加载%JAVA_HOME%/lib/ext/*.jar
+
+
+
+3⃣️ App ClassLoader extends ClassLoader
+
+​	父类的加载器为Extension ClassLoader
+
+​	加载ClassPath下的
+
+
+
+4⃣️ 自定义类加载 extends ClassLoader
+
+​	父类的加载器为App ClassLoader
+
+​	加载自定义路径
+
+
+
+实例代码
+
+```java
+public class Demo {
+    public static void main(String[] args) {
+        System.out.println(Demo.class.getClassLoader());
+        //输出=>sun.misc.Launcher$AppClassLoader@18b4aac2     AppClassLoader
+
+        ClassLoader classLoader = Demo.class.getClassLoader();
+        while (classLoader!=null){
+            System.out.println(classLoader);
+            classLoader = classLoader.getParent();
+        }
+        System.out.println(classLoader);
+        /*  输出：
+            sun.misc.Launcher$AppClassLoader@18b4aac2
+            sun.misc.Launcher$ExtClassLoader@61bbe9ba
+            null（因为）BootStrapClassLoader是jvm低层用C++编写的，所以读取时就是null
+        */
+    }
+}
+```
+
+
+
+### 8.3.ClassLoader源码分析
+
+rt.jar中的ClassLoader.class中的loadClass方法
+
+自定义的类加载器腹泻loadClass方法就可以实现自己的加载。
+
+
+
+下面是ClassLoader.class中的loadClass方法：
+
+> ```java
+> protected Class<?> loadClass(String name, boolean resolve)
+>     throws ClassNotFoundException
+> {
+>     synchronized (getClassLoadingLock(name)) {
+>         // First, check if the class has already been loaded（检查是否已经被加载）
+>         Class<?> c = findLoadedClass(name);
+>         if (c == null) {
+>             long t0 = System.nanoTime();
+>             try {
+>               //否则就用父加载器加载
+>                 if (parent != null) {
+>                     c = parent.loadClass(name, false);
+>                 } else {
+>                //即父类的加载器为null时，用Boostrap加载
+>                     c = findBootstrapClassOrNull(name);
+>                 }
+>             } catch (ClassNotFoundException e) {
+>                 // ClassNotFoundException thrown if class not found
+>                 // from the non-null parent class loader
+>             }
+> 
+>             if (c == null) {
+>                 // If still not found, then invoke findClass in order
+>                 // to find the class.
+>                 long t1 = System.nanoTime();
+>               //父类加载器都没有加载过，就需要在本加载器中进行加载（自定义类加载器就是需要重写findclass方法）
+>                 c = findClass(name);
+> 
+>                 // this is the defining class loader; record the stats
+>                 sun.misc.PerfCounter.getParentDelegationTime().addTime(t1 - t0);
+>                 sun.misc.PerfCounter.getFindClassTime().addElapsedTimeFrom(t1);
+>                 sun.misc.PerfCounter.getFindClasses().increment();
+>             }
+>         }
+>         if (resolve) {
+>             resolveClass(c);
+>         }
+>         return c;
+>     }
+> }
+> ```
+
+加载方式总结：
+
+1.该类加载器检查是否类已经被加载
+
+2.如果没有被加载，就看是否是父类加载器加载了（父类的加载器为null时则父类加载器是BoostrapClassLoader）
+
+3.父类加载器都没有加载过，就需要在本加载器中进行加载（自定义类加载器就是需要重写findclass方法）
+
+
+
+### 8.4.实现自定义的类加载器
+
+实例代码见club.vic.designPatternPractice.ClassLoader
