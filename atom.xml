@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vvvvvvvvvvvvvvvvicky.github.io/"/>
-  <updated>2020-08-23T14:20:05.801Z</updated>
+  <updated>2020-11-23T15:10:53.264Z</updated>
   <id>https://vvvvvvvvvvvvvvvvicky.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2020/11/22/Redis%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2020/11/22/Redis学习记录/</id>
+    <published>2020-11-22T13:22:28.466Z</published>
+    <updated>2020-11-23T15:10:53.264Z</updated>
+    
+    <content type="html"><![CDATA[<p>title: Redis学习记录<br>date: 2020-11-22 21:22:28<br>tags: redis<br>categories: 学习</p><p>redis学习使用、问题记录。</p><a id="more"></a><h1 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>在终端进入下载后的目录，然后：</p><ul><li>解压：tar zxvf redis-X.X.X.tar.gz</li><li>移动到：sudo mv redis-X.X.X /usr/local</li><li>切换到：cd /usr/local/redis-X.X.X/</li><li>编译测试：make test</li><li>编译安装：make install</li></ul><p>完成安装。</p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>1.先开启redis服务端</p><p>终端录入redis-server</p><p>看到Port：6379，启动成功</p><p>2.再打开一个终端（前一个不要关）</p><p>终端录入redis-cli</p><p>即可测试验证</p><p>3.关闭</p><p>关闭客户端：shutdown</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;title: Redis学习记录&lt;br&gt;date: 2020-11-22 21:22:28&lt;br&gt;tags: redis&lt;br&gt;categories: 学习&lt;/p&gt;
+&lt;p&gt;redis学习使用、问题记录。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>JVM学习</title>
@@ -133,9 +152,9 @@
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2019/11/06/%E5%AD%A6%E4%B9%A0Vue/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2019/11/06/学习Vue/</id>
     <published>2019-11-06T15:29:12.000Z</published>
-    <updated>2020-08-08T16:47:48.134Z</updated>
+    <updated>2020-11-22T13:22:54.183Z</updated>
     
-    <content type="html"><![CDATA[<p>学习Vue的一些笔记</p><a id="more"></a><h3 id="1-在vue项目中，执行-npm-run-dev-时提示-parser-“babylon”-is-deprecated-we-now-treat-it-as-parser-“babel”"><a href="#1-在vue项目中，执行-npm-run-dev-时提示-parser-“babylon”-is-deprecated-we-now-treat-it-as-parser-“babel”" class="headerlink" title="1.在vue项目中，执行 npm run dev 时提示{ parser: “babylon” } is deprecated; we now treat it as { parser: “babel” }"></a>1.在vue项目中，执行 npm run dev 时提示{ parser: “babylon” } is deprecated; we now treat it as { parser: “babel” }</h3><p>问题原因：是prettier版本导致的，重装prettier：npm install prettier@~1.12.0 -D或者cnpm install prettier@~1.12.0 –save-dev,然后重新npm run dev<br>解决办法：<br>找到modules包里面的：node_modules\vue-loader\lib\template-compiler\index.js<br>将{ parser: “babylon” } 换成  { parser: “babel” } 即可</p><h3 id="2-修改了App-vue后，提示“Component-template-should-contain-exactly-one-root-element-If-you-are-using-v-if-on-multiple-elements-use-v-else-if-to-chain-them-instead-”"><a href="#2-修改了App-vue后，提示“Component-template-should-contain-exactly-one-root-element-If-you-are-using-v-if-on-multiple-elements-use-v-else-if-to-chain-them-instead-”" class="headerlink" title="2.修改了App.vue后，提示“Component template should contain exactly one root element. If you are using v-if on multiple elements, use v-else-if to chain them instead.”"></a>2.修改了App.vue后，提示“Component template should contain exactly one root element. If you are using v-if on multiple elements, use v-else-if to chain them instead.”</h3><p>问题原因：<strong>vue模板只能有一个根对象</strong><br>解决方法：用一个div来或是别的标签来包裹全部的元素<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">"primary"</span>&gt;</span>button_1<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>div_1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">el-input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"测试一下"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-input</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span></span><span class="template-variable">&#123;&#123;test1&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p>学习Vue的一些笔记</p><a id="more"></a><h2 id="基础："><a href="#基础：" class="headerlink" title="基础："></a>基础：</h2><p>1.前后端交互</p><p>前段工作：SPA   页面导航功能（Vue Router）、组件之间公共信息保存（Vuex）、服务器数据资源请求（axios）、权限和安全。</p><p>（1）Vue Router</p><p>路由管理器，构建单页面应用</p><p>（2）Vuex</p><p>状态管理器。集中式存储管理应用的所有组件状态</p><h2 id="问题记录："><a href="#问题记录：" class="headerlink" title="问题记录："></a>问题记录：</h2><h3 id="1-在vue项目中，执行-npm-run-dev-时提示-parser-“babylon”-is-deprecated-we-now-treat-it-as-parser-“babel”"><a href="#1-在vue项目中，执行-npm-run-dev-时提示-parser-“babylon”-is-deprecated-we-now-treat-it-as-parser-“babel”" class="headerlink" title="1.在vue项目中，执行 npm run dev 时提示{ parser: “babylon” } is deprecated; we now treat it as { parser: “babel” }"></a>1.在vue项目中，执行 npm run dev 时提示{ parser: “babylon” } is deprecated; we now treat it as { parser: “babel” }</h3><p>问题原因：是prettier版本导致的，重装prettier：npm install prettier@~1.12.0 -D或者cnpm install prettier@~1.12.0 –save-dev,然后重新npm run dev<br>解决办法：<br>找到modules包里面的：node_modules\vue-loader\lib\template-compiler\index.js<br>将{ parser: “babylon” } 换成  { parser: “babel” } 即可</p><h3 id="2-修改了App-vue后，提示“Component-template-should-contain-exactly-one-root-element-If-you-are-using-v-if-on-multiple-elements-use-v-else-if-to-chain-them-instead-”"><a href="#2-修改了App-vue后，提示“Component-template-should-contain-exactly-one-root-element-If-you-are-using-v-if-on-multiple-elements-use-v-else-if-to-chain-them-instead-”" class="headerlink" title="2.修改了App.vue后，提示“Component template should contain exactly one root element. If you are using v-if on multiple elements, use v-else-if to chain them instead.”"></a>2.修改了App.vue后，提示“Component template should contain exactly one root element. If you are using v-if on multiple elements, use v-else-if to chain them instead.”</h3><p>问题原因：<strong>vue模板只能有一个根对象</strong><br>解决方法：用一个div来或是别的标签来包裹全部的元素<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">"primary"</span>&gt;</span>button_1<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>div_1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">el-input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"测试一下"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-input</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span></span><span class="template-variable">&#123;&#123;test1&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
@@ -445,28 +464,6 @@
       <category term="踩坑" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
     
       <category term="windows" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VSTS笔记</title>
-    <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2017/12/26/VSTS%E7%AC%94%E8%AE%B0/"/>
-    <id>https://vvvvvvvvvvvvvvvvicky.github.io/2017/12/26/VSTS笔记/</id>
-    <published>2017-12-25T16:12:52.000Z</published>
-    <updated>2020-08-08T16:47:48.130Z</updated>
-    
-    <content type="html"><![CDATA[<p>搭建TFS之后，再度体验线上版本的VSTS，记录学习过程<br><a id="more"></a></p><h1 id="VSTS笔记-nbsp-nbsp-nbsp-Day-1"><a href="#VSTS笔记-nbsp-nbsp-nbsp-Day-1" class="headerlink" title="VSTS笔记&nbsp;&nbsp;&nbsp;Day 1"></a>VSTS笔记&nbsp;&nbsp;&nbsp;Day 1</h1><p>Epic<br>&nbsp;&nbsp;Feature<br>&nbsp;&nbsp;&nbsp;&nbsp;Story<br>&nbsp;&nbsp;&nbsp;&nbsp;Story<br>&nbsp;&nbsp;Feature<br>&nbsp;&nbsp;&nbsp;&nbsp;Story<br>&nbsp;&nbsp;&nbsp;&nbsp;Story  </p><p>以上为三者的包含关系。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;搭建TFS之后，再度体验线上版本的VSTS，记录学习过程&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="学习" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="VSTS" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/VSTS/"/>
     
   </entry>
   
