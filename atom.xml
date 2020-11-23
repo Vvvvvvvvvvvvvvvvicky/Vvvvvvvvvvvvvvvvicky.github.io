@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vvvvvvvvvvvvvvvvicky.github.io/"/>
-  <updated>2020-11-23T15:10:53.264Z</updated>
+  <updated>2020-11-23T15:22:23.017Z</updated>
   <id>https://vvvvvvvvvvvvvvvvicky.github.io/</id>
   
   <author>
@@ -17,21 +17,24 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>Redis学习记录</title>
     <link href="https://vvvvvvvvvvvvvvvvicky.github.io/2020/11/22/Redis%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
     <id>https://vvvvvvvvvvvvvvvvicky.github.io/2020/11/22/Redis学习记录/</id>
-    <published>2020-11-22T13:22:28.466Z</published>
-    <updated>2020-11-23T15:10:53.264Z</updated>
+    <published>2020-11-22T13:22:28.000Z</published>
+    <updated>2020-11-23T15:22:23.017Z</updated>
     
-    <content type="html"><![CDATA[<p>title: Redis学习记录<br>date: 2020-11-22 21:22:28<br>tags: redis<br>categories: 学习</p><p>redis学习使用、问题记录。</p><a id="more"></a><h1 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>在终端进入下载后的目录，然后：</p><ul><li>解压：tar zxvf redis-X.X.X.tar.gz</li><li>移动到：sudo mv redis-X.X.X /usr/local</li><li>切换到：cd /usr/local/redis-X.X.X/</li><li>编译测试：make test</li><li>编译安装：make install</li></ul><p>完成安装。</p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>1.先开启redis服务端</p><p>终端录入redis-server</p><p>看到Port：6379，启动成功</p><p>2.再打开一个终端（前一个不要关）</p><p>终端录入redis-cli</p><p>即可测试验证</p><p>3.关闭</p><p>关闭客户端：shutdown</p>]]></content>
+    <content type="html"><![CDATA[<p>redis学习使用、问题记录。</p><a id="more"></a><h1 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>在终端进入下载后的目录，然后：</p><ul><li>解压：tar zxvf redis-X.X.X.tar.gz</li><li>移动到：sudo mv redis-X.X.X /usr/local</li><li>切换到：cd /usr/local/redis-X.X.X/</li><li>编译测试：make test</li><li>编译安装：make install</li></ul><p>完成安装。</p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>1.先开启redis服务端</p><p>终端录入redis-server</p><p>看到Port：6379，启动成功</p><p>2.再打开一个终端（前一个不要关）</p><p>终端录入redis-cli</p><p>即可测试验证</p><p>3.关闭</p><p>关闭客户端：shutdown</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;title: Redis学习记录&lt;br&gt;date: 2020-11-22 21:22:28&lt;br&gt;tags: redis&lt;br&gt;categories: 学习&lt;/p&gt;
-&lt;p&gt;redis学习使用、问题记录。&lt;/p&gt;
+      &lt;p&gt;redis学习使用、问题记录。&lt;/p&gt;
     
     </summary>
     
+      <category term="学习" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="redis" scheme="https://vvvvvvvvvvvvvvvvicky.github.io/tags/redis/"/>
     
   </entry>
   
