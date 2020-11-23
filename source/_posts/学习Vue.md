@@ -12,6 +12,24 @@ comments: true
 
 <!--more-->
 
+## 基础：
+
+1.前后端交互
+
+前段工作：SPA   页面导航功能（Vue Router）、组件之间公共信息保存（Vuex）、服务器数据资源请求（axios）、权限和安全。
+
+（1）Vue Router
+
+路由管理器，构建单页面应用
+
+（2）Vuex
+
+状态管理器。集中式存储管理应用的所有组件状态
+
+
+
+## 问题记录：
+
 ### 1.在vue项目中，执行 npm run dev 时提示{ parser: "babylon" } is deprecated; we now treat it as { parser: "babel" }
 问题原因：是prettier版本导致的，重装prettier：npm install prettier@~1.12.0 -D或者cnpm install prettier@~1.12.0 --save-dev,然后重新npm run dev
 解决办法：
